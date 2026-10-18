@@ -6,7 +6,6 @@
       (function () {
         let isGitHub = location.hostname.endsWith('github.io');
         let href = isGitHub ? '/gaafar-labs/' : '/';
-        // document.write يضمن أن base يُدرج فوراً قبل بقية عناصر head
         document.write('<base href="' + href + '">');
       })();
     </script>
@@ -21,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet"></link>
+    <link href="./css/style.css" rel="stylesheet"></link>
   </head>
 
   <body>
@@ -68,8 +67,8 @@
 
     <!-- الهيرو -->
     <section class="hero">
-      <img src="imgs/vector.svg" class="hero-vector vector-left" alt="hero-vector">
-      <img src="imgs/vector.svg" class="hero-vector vector-right" alt="hero-vector">
+      <img src="./imgs/vector.svg" class="hero-vector vector-left" alt="hero-vector">
+      <img src="./imgs/vector.svg" class="hero-vector vector-right" alt="hero-vector">
       <div class="container hero-in">
         <div class="hero-content reveal">
 
@@ -121,7 +120,7 @@
 
         <div class="hero-card reveal">
           <div>
-            <img src="imgs/discount-flash.svg" class="discount-flash" alt="discount-flash">
+            <img src="./imgs/discount-flash.svg" class="discount-flash" alt="discount-flash">
             <h3>خصم خاص <br> <span style="font-size: 33px;">لأول 100 حجز</span><br> عن طريق الموقع</h3>
           </div>
           <p class="sub">خصم خاص لمتابعي صفحة الفيسبوك</p>
@@ -1149,7 +1148,7 @@
           <div class="foot-col">
 
             <div class="foot-logo">
-              <img src="imgs/logo-icon.png" alt="logo-icon" width="50px">
+              <img src="./imgs/logo-icon.png" alt="logo-icon" width="50px">
               <div class="logo-txt">
                 <h3>معامل أ.د. عبد الله جعفر</h3>
                 <p>للتحاليـل الطبيـة</p>
@@ -1163,7 +1162,7 @@
               صحتك أمانة، ودقتنا وعد.
             </p>
 
-            <img src="imgs/gaafar-logo-black.png" alt="logo-black" width="150px"
+            <img src="./imgs/gaafar-logo-black.png" alt="logo-black" width="150px"
             style="margin-top: 20px; margin-left: auto; margin-right: auto;">
 
           </div>
