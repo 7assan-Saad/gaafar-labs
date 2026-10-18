@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet"></link>
+
+    <style>
+      /* ===== أنماط خاصة بصفحة التواصل (مبنية على نفس المتغيرات) ===== */
+      .quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:50px;}
+      
+      .branches-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+      
+      .branch{
+        background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+        transition:var(--trans);display:flex;flex-direction:column;height:100%;
+      }
+      
+      /* رأس البطاقة */
+      .branch-head{
+        background:var(--black);color:#fff;padding:26px 26px 28px;
+        display:flex;gap:16px;align-items:flex-start;position:relative;overflow:hidden;
+      }
+      .branch-head::after{
+        content:'';position:absolute;top:-80px;left:-50px;width:230px;height:230px;
+        background:radial-gradient(circle,rgba(216,20,28,.45),transparent 68%);
+        border-radius:50%;filter:blur(12px);
+      }
+      .branch-ico{
+        width:54px;height:54px;border-radius:15px;background:rgba(216,20,28,.2);
+        border:1px solid rgba(216,20,28,.42);display:flex;align-items:center;justify-content:center;
+        flex-shrink:0;position:relative;z-index:2;
+      }
+      .branch-ico svg{width:27px;height:27px;color:var(--red);}
+      .branch-head h3{font-size:20px;font-weight:800;margin-bottom:7px;position:relative;z-index:2;}
+      .branch-head p{font-size:14px;color:#b9bcc4;line-height:1.9;position:relative;z-index:2;font-weight:400;}
+      
+      /* جسم البطاقة */
+      .branch-body{padding:22px 24px 4px;display:grid;gap:11px;flex:1;}
+      
+      .info-row{
+        display:flex;gap:13px;align-items:center;padding:13px 16px;border-radius:12px;
+        background:var(--light);border:1.5px solid transparent;transition:var(--trans);
+      }
+
+      .info-row .ic{
+        width:40px;height:40px;border-radius:11px;background:#fff;flex-shrink:0;
+        display:flex;align-items:center;justify-content:center;
+        box-shadow:0 3px 10px rgba(0,0,0,.06);
+      }
+      .info-row .ic svg{width:19px;height:19px;color:var(--red);}
+      .info-row b{display:block;font-size:12.5px;font-weight:700;color:var(--gray);margin-bottom:2px;}
+      .info-row em{display:block;font-style:normal;font-size:16px;font-weight:800;color:var(--black);letter-spacing:.3px;}
+      
+      /* صف المواعيد */
+      .info-row.red{background:rgba(216,20,28,.07);border-color:rgba(216,20,28,.28);}
+      .info-row.red .ic{background:var(--red);box-shadow:0 6px 16px rgba(216,20,28,.3);}
+      .info-row.red .ic svg{color:#fff;}
+      .info-row.red em{color:var(--red);}
+      
+      /* الخريطة داخل البطاقة */
+      .branch-map{padding:16px 24px 0;}
+      .branch-map iframe{
+        width:100%;height:225px;border:0;border-radius:14px;display:block;
+        filter:grayscale(.15);box-shadow:inset 0 0 0 1px var(--line);
+      }
+      
+      /* أزرار البطاقة */
+      .branch-actions{padding:18px 24px 26px;display:flex;gap:12px;flex-wrap:wrap;}
+      .branch-actions .btn{flex:1;min-width:148px;padding:13px 18px;font-size:14.5px;}
+           
+      /* ===== الاستجابة ===== */
+      @media(max-width:980px){
+        .branches-grid{grid-template-columns:1fr;}
+        .quick-grid{grid-template-columns:1fr 1fr;}
+      }
+      @media(max-width:680px){
+        .quick-grid{grid-template-columns:1fr;}
+        .branch-head{padding:22px 20px 24px;}
+        .branch-body{padding:18px 18px 2px;}
+        .branch-map{padding:14px 18px 0;}
+        .branch-map iframe{height:200px;}
+        .branch-actions{padding:16px 18px 22px;}
+        .branch-actions .btn{flex:1 1 100%;}
+      }
+    </style>
+    
+  </head>
+
+  <body>
+
+    <!-- الهيدر -->
+    <header class="header" id="header">
+      <div class="container header-container header-in">
+
+        <a href="/" class="logo">
+          <img src="../imgs/logo-icon.png" alt="logo-icon" width="40px">
+          <div class="logo-txt">
+            <h3>معامل أ.د. عبد الله جعفر</h3>
+            <p>للتحاليـل الطبيـة</p>
+          </div>
+        </a>
+
+        <nav class="nav" id="nav">
+          <a href="/">الرئيسية</a>
+          <a href="/about">عن المعمل</a>
+          <a href="/doctor">عن الدكتور</a>
+          <a href="/services">الخدمات والتحاليل</a>
+          <a href="/discounts">الخصومات</a>
+          <a href="/articles">المقالات</a>
+          <a href="/faq">الأسئلة الشائعة</a>
+          <a href="/contact-us">التواصل</a>
+
+          <div class="header-cta">
+            <a href="/booking" class="btn btn-red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              احجز موعدك
+            </a>
+          </div>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </header>
+
+    <section class="sec sec-gray" id="contact-page">
+      <div class="container">
+    
+        <div class="sec-head reveal">
+          <span class="sec-tag">تواصل معنا</span>
+          <h2>فروعنــــا</h2>
+          <p>فرعان في خدمتك — اتصل، راسلنا على الواتساب، أو زُر أقرب فرع إليك.</p>
+          <div class="sec-line"></div>
+        </div>
+    
+        <!-- بطاقات الفروع -->
+        <div class="branches-grid">
+    
+          <!-- ===== فرع العامرية ===== -->
+          <article class="branch reveal">
+            <div class="branch-head">
+              <div class="branch-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M12 7v4M10 9h4"/>
+                </svg>
+              </div>
+              <div>
+                <h3>فرع العامرية</h3>
+                <p>شارع المستشفى - برج الصفوة - أمام المستشفى العام</p>
+              </div>
+            </div>
+    
+            <div class="branch-body">
+              <a class="info-row" href="tel:+2034499182">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span>
+                  <b>تليفون</b>
+                  <em>034499182</em>
+                </span>
+              </a>
+    
+              <a class="info-row" href="tel:+201114544737">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+                </span>
+                <span>
+                  <b>موبايل</b>
+                  <em>01114544737</em>
+                </span>
+              </a>
+    
+              <a class="info-row" href="https://wa.me/201006424284" target="_blank" rel="noopener">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+                </span>
+                <span>
+                  <b>واتساب</b>
+                  <em>01006424284</em>
+                </span>
+              </a>
+    
+              <div class="info-row red">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </span>
+                <span>
+                  <b>المواعيد</b>
+                  <em>من 8 ص إلى 10 م</em>
+                </span>
+              </div>
+            </div>
+    
+            <div class="branch-map">
+              <iframe
+                src="https://www.google.com/maps?q=%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%8C%20%D8%A7%D9%84%D8%A5%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="خريطة فرع العامرية">
+              </iframe>
+            </div>
+    
+            <div class="branch-actions">
+              <a href="https://wa.me/201006424284" target="_blank" rel="noopener" class="btn btn-wa">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+                واتساب الفرع
+              </a>
+              <a href="https://maps.google.com/?q=%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%8C%20%D8%A7%D9%84%D8%A5%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9" target="_blank" rel="noopener" class="btn btn-outline-dark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                اللوكيشن
+              </a>
+            </div>
+          </article>
+    
+          <!-- ===== فرع العجمي ===== -->
+          <article class="branch reveal">
+            <div class="branch-head">
+              <div class="branch-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M12 7v4M10 9h4"/>
+                </svg>
+              </div>
+              <div>
+                <h3>فرع العجمي</h3>
+                <p>طريق إسكندرية مطروح - أبو يوسف - برج الصابرين - الدور الأول علوي شقة (٨)</p>
+              </div>
+            </div>
+    
+            <div class="branch-body">
+              <a class="info-row" href="tel:+2034111048">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span>
+                  <b>تليفون</b>
+                  <em>034111048</em>
+                </span>
+              </a>
+    
+              <a class="info-row" href="tel:+201155580450">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+                </span>
+                <span>
+                  <b>موبايل</b>
+                  <em>01155580450</em>
+                </span>
+              </a>
+    
+              <a class="info-row" href="https://wa.me/201210358627" target="_blank" rel="noopener">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+                </span>
+                <span>
+                  <b>واتساب</b>
+                  <em>01210358627</em>
+                </span>
+              </a>
+    
+              <div class="info-row red">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </span>
+                <span>
+                  <b>المواعيد</b>
+                  <em>من 9 ص إلى 11 م — عدا الجمعة</em>
+                </span>
+              </div>
+            </div>
+    
+            <div class="branch-map">
+              <iframe
+                src="https://www.google.com/maps?q=%D8%A3%D8%A8%D9%88%20%D9%8A%D9%88%D8%B3%D9%81%20%D8%A7%D9%84%D8%B9%D8%AC%D9%85%D9%8A%20%D8%A7%D9%84%D8%A5%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="خريطة فرع العجمي">
+              </iframe>
+            </div>
+    
+            <div class="branch-actions">
+              <a href="https://wa.me/201210358627" target="_blank" rel="noopener" class="btn btn-wa">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+                واتساب الفرع
+              </a>
+              <a href="https://maps.google.com/?q=%D8%A3%D8%A8%D9%88%20%D9%8A%D9%88%D8%B3%D9%81%20%D8%A7%D9%84%D8%B9%D8%AC%D9%85%D9%8A%20%D8%A7%D9%84%D8%A5%D8%B3%D9%83%D9%86%D8%AF%D8%B1%D9%8A%D8%A9" target="_blank" rel="noopener" class="btn btn-outline-dark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                اللوكيشن
+              </a>
+            </div>
+          </article>
+    
+        </div>
+    
+        <!-- دعوة أخيرة -->
+        <div class="contact-cta reveal">
+          <h3>مش لاقي الوقت المناسب؟ إحنا نيجي لك</h3>
+          <p>احجز موعدك الآن واطلب سحب العينة من المنزل مجاناً داخل النطاق المحدد، أو تواصل معنا مباشرة على الواتساب وهنساعدك تختار التحليل المناسب.</p>
+          <div class="btns">
+            <a href="/booking" class="btn btn-red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              احجز موعدك الآن
+            </a>
+            <a href="https://wa.me/201006424284" target="_blank" rel="noopener" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+              راسلنا على الواتساب
+            </a>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+      <div class="container">
+        <div class="foot-grid">
+          <div class="foot-col">
+
+            <div class="foot-logo">
+              <img src="../imgs/logo-icon.png" alt="logo-icon" width="50px">
+              <div class="logo-txt">
+                <h3>معامل أ.د. عبد الله جعفر</h3>
+                <p>للتحاليـل الطبيـة</p>
+              </div>
+            </div>
+
+            <p>
+              معامل متخصصة في التحاليل الطبية، نقدم نتائج دقيقة وخدمة إنسانية راقية
+              بأحدث الأجهزة وأمهر فريق طبي.
+              <br>
+              صحتك أمانة، ودقتنا وعد.
+            </p>
+
+            <img src="../imgs/gaafar-logo-black.png" alt="logo-black" width="150px"
+            style="margin-top: 20px; margin-left: auto; margin-right: auto;">
+
+          </div>
+
+          <div class="foot-col">
+            <h4>روابط سريعة</h4>
+            <ul>
+              <li><a href="/booking">حجز موعد</a></li>
+              <li><a href="/about">عن المعمل</a></li>
+              <li><a href="/doctor">عن الدكتور</a></li>
+              <li><a href="/services">الخدمات والتحاليل</a></li>
+              <li><a href="/services">قبل التحليل</a></li>
+              <li><a href="/faq">الأسئلة الشائعة</a></li>
+            </ul>
+          </div>
+
+          <div class="foot-col">
+            <h4>خدماتنا</h4>
+            <ul>
+              <li><a href="/services">التحليل الشامل</a></li>
+              <li><a href="/services">تحاليل ما قبل الزواج</a></li>
+              <li><a href="/services">تحاليل السكري والكلى</a></li>
+              <li><a href="/services">تحاليل الهرمونات</a></li>
+              <li><a href="/services">تحاليل الشركات</a></li>
+              <li><a href="/discounts">الخصومات والاشتراكات</a></li>
+            </ul>
+          </div>
+
+          <div class="foot-col">
+            <h4>تواصل معنا</h4>
+            <ul>
+              <li><a href="/contact-us">صفحة التواصل</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="foot-bottom">
+          <span>© <span id="year"></span> معامل أ.د. عبد الله جعفر للتحاليل الطبية — جميع الحقوق محفوظة.</span>
+          <span>تصميم وتطوير م.
+            <a href="https://wa.me/+201060344718" target="_blank"
+            style="font-weight: 800;">
+              حســن سعـــد
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-stack">
+
+      <!-- واتساب -->
+      <a href="https://wa.me/201006424284"
+        class="wa-float" target="_blank" rel="noopener" aria-label="تواصل واتساب">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+      </a>
+
+      <!-- فيسبوك -->
+      <a href="https://www.facebook.com/drgaafarlabs/"
+        class="fb-float" target="_blank" rel="noopener" aria-label="صفحة الفيسبوك">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+      </a>
+
+      <!-- المشاركة -->
+      <button type="button" class="share-float" id="shareBtn" aria-label="مشاركة صفحة الموقع">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"/>
+          <circle cx="6" cy="12" r="3"/>
+          <circle cx="18" cy="19" r="3"/>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </svg>
+      </button>
+
+    </div>
+    
+    <!-- تنبيه النسخ -->
+    <div class="share-toast" id="shareToast">✅ تم نسخ رابط الصفحة</div>
+
+    <button class="to-top" id="toTop" aria-label="عودة للأعلى">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/animation.js"></script>
+  </body>
+</html>
