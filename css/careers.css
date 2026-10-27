@@ -1,0 +1,136 @@
+
+/* الهيرو */
+.job-hero{position:relative;overflow:hidden;padding:85px 0 95px}
+.job-hero::before{
+  content:'';position:absolute;top:-200px;left:-140px;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(216,20,28,.4),transparent 68%);
+  border-radius:50%;filter:blur(28px);
+}
+.job-hero::after{
+  content:'';position:absolute;bottom:-240px;right:-160px;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(82,85,95,.5),transparent 70%);
+  border-radius:50%;filter:blur(28px);
+}
+.job-hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:center}
+.job-hero h1{font-size:clamp(28px,4.6vw,50px);font-weight:900;line-height:1.8;margin-bottom:15px;color:var(--white)}
+.job-hero h1 span{display:block;color:var(--red)}
+.job-hero .lead{font-size:17px;color:#b9bcc4;max-width:590px;margin-bottom:30px;font-weight:400}
+.job-hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* المزايا */
+.job-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.job-benefit{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:28px 24px;transition:var(--trans);border-top:4px solid var(--red);
+}
+.job-benefit .ic{
+  width:52px;height:52px;border-radius:14px;background:rgba(216,20,28,.09);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+}
+.job-benefit .ic svg{width:25px;height:25px;color:var(--red)}
+.job-benefit h4{font-size:17px;font-weight:800;margin-bottom:8px}
+.job-benefit p{font-size:14.5px;color:var(--gray)}
+
+/* تبويبات الوظائف (أسماء مستقلة لتجنب تعارض السكربت) */
+.job-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:38px}
+.jtab{
+  padding:11px 24px;border-radius:50px;border:2px solid var(--line);background:#fff;
+  font-weight:700;font-size:14.5px;cursor:pointer;transition:var(--trans);color:var(--gray);
+}
+.jtab:hover{border-color:var(--red);color:var(--red)}
+.jtab.on{background:var(--black);border-color:var(--black);color:#fff}
+
+/* بطاقات الوظائف */
+.jobs-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.job-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:26px 24px;transition:var(--trans);display:flex;flex-direction:column;
+}
+.job-card:hover{box-shadow:var(--shadow-lg);border-color:transparent}
+.job-card-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.job-card-head .ic{
+  width:52px;height:52px;border-radius:14px;background:rgba(216,20,28,.09);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.job-card-head .ic svg{width:26px;height:26px;color:var(--red)}
+.job-card h3{font-size:18px;font-weight:800;margin-bottom:3px}
+.job-card .dept{font-size:13px;color:var(--gray);font-weight:600}
+.job-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.job-tags span{
+  font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:50px;
+  background:var(--light);color:var(--gray);
+}
+.job-tags span.red{background:rgba(216,20,28,.09);color:var(--red)}
+.job-tags span.green{background:rgba(37,211,102,.13);color:#12833f}
+.job-card .desc{font-size:14px;color:var(--gray);margin-bottom:14px}
+.job-req{display:grid;gap:7px;margin-bottom:20px;flex:1}
+.job-req li{font-size:14px;color:#2b2d33;padding-right:17px;position:relative}
+.job-req li::before{
+  content:'';position:absolute;right:2px;top:11px;width:6px;height:6px;
+  border-radius:50%;background:var(--red);
+}
+.job-card .btn{width:100%;margin-top:auto}
+
+/* مراحل التوظيف */
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.process-step{
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;padding:26px 20px;transition:var(--trans);
+}
+.process-step .num{
+  width:42px;height:42px;border-radius:50%;background:rgba(216,20,28,.16);
+  border:1px solid rgba(216,20,28,.45);color:#ff9196;font-weight:900;font-size:16px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.process-step h4{font-size:15.5px;font-weight:800;margin-bottom:6px;color:#fff}
+.process-step p{font-size:13.5px;color:#a9acb4;line-height:1.85}
+
+/* نموذج التقديم */
+.apply-wrap{
+  display:grid;grid-template-columns:.85fr 1.15fr;border-radius:24px;
+  overflow:hidden;box-shadow:var(--shadow-lg);background:#fff;
+}
+.apply-side{background:var(--black);color:#fff;padding:46px 38px;position:relative;overflow:hidden}
+.apply-side::before{
+  content:'';position:absolute;bottom:-150px;left:-110px;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(216,20,28,.42),transparent 68%);
+  border-radius:50%;
+}
+.apply-side h3{font-size:24px;font-weight:800;margin-bottom:12px;position:relative;z-index:2}
+.apply-side > p{color:#b9bcc4;font-size:14.5px;margin-bottom:24px;position:relative;z-index:2}
+.apply-list{display:grid;gap:16px;position:relative;z-index:2}
+.apply-list li{display:flex;gap:13px;align-items:flex-start}
+.apply-list .ic{
+  width:40px;height:40px;border-radius:11px;background:rgba(216,20,28,.18);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.apply-list .ic svg{width:20px;height:20px;color:var(--red)}
+.apply-list b{display:block;font-size:14.5px;font-weight:700}
+.apply-list span{font-size:12.5px;color:#a9acb4;line-height:1.8}
+.apply-form{padding:46px 38px}
+.apply-form h3{font-size:22px;font-weight:800;margin-bottom:5px}
+.apply-form .hint{font-size:13.5px;color:var(--gray);margin-bottom:24px}
+.apply-form .field textarea{min-height:80px}
+.apply-form .form-note{font-size:12px;color:var(--gray);margin-top:12px;text-align:center;line-height:1.8}
+
+.apply-success{
+  display:none;background:rgba(37,211,102,.1);border:1.5px solid rgba(37,211,102,.45);
+  color:#12833f;font-size:13.5px;font-weight:700;padding:13px 16px;
+  border-radius:12px;margin-top:14px;
+}
+.apply-success.on{display:block;animation:fadeUp .4s ease}
+
+/* الاستجابة */
+@media(max-width:1080px){
+  .job-hero-in,.apply-wrap{grid-template-columns:1fr}
+  .job-benefits{grid-template-columns:1fr 1fr}
+  .process{grid-template-columns:1fr 1fr 1fr}
+  .jobs-grid{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .job-hero{padding:60px 0 70px}
+  .job-hero-btns .btn{width:100%}
+  .job-benefits,.process{grid-template-columns:1fr}
+  .apply-side,.apply-form{padding:34px 22px}
+  .job-card{padding:22px 20px}
+}
