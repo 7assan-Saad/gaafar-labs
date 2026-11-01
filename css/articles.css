@@ -1,0 +1,118 @@
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.article {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: var(--trans);
+  display: flex;
+  flex-direction: column;
+}
+
+.article:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.article .ph {
+  min-height: 180px;
+  border-radius: 0;
+}
+
+.article-body {
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article .cat {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--red);
+  background: rgba(216, 20, 28, .09);
+  padding: 4px 12px;
+  border-radius: 50px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+
+.article h4 {
+  font-size: 17.5px;
+  font-weight: 800;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-size: 14.5px;
+  color: var(--gray);
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.article .more {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: var(--trans);
+}
+
+.article .more:hover {
+  gap: 12px;
+}
+
+/* ============ الصور البديلة ============ */
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1c21, #3d4049 55%, #0a0b0d);
+  border-radius: var(--radius);
+  color: rgba(255, 255, 255, .65);
+  font-weight: 700;
+  font-size: 15px;
+  min-height: 220px;
+  border: 1px solid rgba(0, 0, 0, .06);
+}
+
+.ph::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, .028) 0 12px, transparent 12px 24px),
+    radial-gradient(circle at 78% 18%, rgba(216, 20, 28, .34), transparent 58%);
+}
+
+.ph span {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 16px;
+}
+
+.ph svg {
+  width: 38px;
+  height: 38px;
+  color: var(--red);
+}
+
+.ph.tall {
+  min-height: 340px;
+}

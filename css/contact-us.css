@@ -1,0 +1,76 @@
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:50px;}
+      
+.branches-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+
+.branch{
+  background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:var(--trans);display:flex;flex-direction:column;height:100%;
+}
+
+/* رأس البطاقة */
+.branch-head{
+  background:var(--black);color:#fff;padding:26px 26px 28px;
+  display:flex;gap:16px;align-items:flex-start;position:relative;overflow:hidden;
+}
+.branch-head::after{
+  content:'';position:absolute;top:-80px;left:-50px;width:230px;height:230px;
+  background:radial-gradient(circle,rgba(216,20,28,.45),transparent 68%);
+  border-radius:50%;filter:blur(12px);
+}
+.branch-ico{
+  width:54px;height:54px;border-radius:15px;background:rgba(216,20,28,.2);
+  border:1px solid rgba(216,20,28,.42);display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;position:relative;z-index:2;
+}
+.branch-ico svg{width:27px;height:27px;color:var(--red);}
+.branch-head h3{font-size:20px;font-weight:800;margin-bottom:7px;position:relative;z-index:2;}
+.branch-head p{font-size:14px;color:#b9bcc4;line-height:1.9;position:relative;z-index:2;font-weight:400;}
+
+/* جسم البطاقة */
+.branch-body{padding:22px 24px 4px;display:grid;gap:11px;flex:1;}
+
+.info-row{
+  display:flex;gap:13px;align-items:center;padding:13px 16px;border-radius:12px;
+  background:var(--light);border:1.5px solid transparent;transition:var(--trans);
+}
+
+.info-row .ic{
+  width:40px;height:40px;border-radius:11px;background:#fff;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 10px rgba(0,0,0,.06);
+}
+.info-row .ic svg{width:19px;height:19px;color:var(--red);}
+.info-row b{display:block;font-size:12.5px;font-weight:700;color:var(--gray);margin-bottom:2px;}
+.info-row em{display:block;font-style:normal;font-size:16px;font-weight:800;color:var(--black);letter-spacing:.3px;}
+
+/* صف المواعيد */
+.info-row.red{background:rgba(216,20,28,.07);border-color:rgba(216,20,28,.28);}
+.info-row.red .ic{background:var(--red);box-shadow:0 6px 16px rgba(216,20,28,.3);}
+.info-row.red .ic svg{color:#fff;}
+.info-row.red em{color:var(--red);}
+
+/* الخريطة داخل البطاقة */
+.branch-map{padding:16px 24px 0;}
+.branch-map iframe{
+  width:100%;height:225px;border:0;border-radius:14px;display:block;
+  filter:grayscale(.15);box-shadow:inset 0 0 0 1px var(--line);
+}
+
+/* أزرار البطاقة */
+.branch-actions{padding:18px 24px 26px;display:flex;gap:12px;flex-wrap:wrap;}
+.branch-actions .btn{flex:1;min-width:148px;padding:13px 18px;font-size:14.5px;}
+     
+/* ===== الاستجابة ===== */
+@media(max-width:980px){
+  .branches-grid{grid-template-columns:1fr;}
+  .quick-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:680px){
+  .quick-grid{grid-template-columns:1fr;}
+  .branch-head{padding:22px 20px 24px;}
+  .branch-body{padding:18px 18px 2px;}
+  .branch-map{padding:14px 18px 0;}
+  .branch-map iframe{height:200px;}
+  .branch-actions{padding:16px 18px 22px;}
+  .branch-actions .btn{flex:1 1 100%;}
+}

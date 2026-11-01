@@ -1,0 +1,178 @@
+
+@media(max-width:1430px) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .98);
+    padding: 18px 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(14px);
+  }
+
+  .nav.open a {
+    padding: 13px 14px;
+  }
+
+  .about-grid,
+  .doc-grid,
+  .booking-wrap,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-in {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feat:nth-child(3) {
+    border-left: none;
+  }
+
+  .vm-grid,
+  .devices,
+  .tests-grid,
+  .packs,
+  .articles,
+  .loyal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .certs,
+  .stats-grid,
+  .days-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .doc-photo .ph {
+    min-height: 380px;
+  }
+
+  .booking-side,
+  .booking-form {
+    padding: 40px 28px;
+  }
+}
+
+@media(max-width:1080px){
+  .hero-in,.apply-wrap{grid-template-columns:1fr}
+}
+
+@media(max-width:680px) {
+  .sec {
+    padding: 62px 0;
+  }
+
+  .topbar-in {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .topbar-info {
+    gap: 14px;
+    font-size: 12.5px;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 0 70px;
+  }
+  
+  .hero-btns .btn {
+    width: 100%;
+  }
+  
+  .hero-card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .features-in,
+  .vm-grid,
+  .devices,
+  .tests-grid,
+  .packs,
+  .articles,
+  .loyal-grid,
+  .certs,
+  .stats-grid,
+  .days-grid,
+  .banners,
+  .guide-grid,
+  .form-row,
+  .trust {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    border-left: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+  }
+
+  .foot-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .booking-side,
+  .booking-form {
+    padding: 34px 22px;
+  }
+
+  .loyal-hero {
+    padding: 38px 24px;
+  }
+
+  .doc-badge {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -18px;
+    text-align: center;
+  }
+
+  .contact-cta {padding:34px 22px;}
+  .contact-cta-title {display:block;margin-bottom:15px;}
+  .contact-cta .btns .btn {width:100%;}
+
+  .to-top { bottom: 18px; right: 18px; }
+
+  .float-stack { bottom:18px; left:18px; gap:12px; }
+
+  .to-top, .wa-float, .fb-float, .share-float {
+    width:52px; height:52px;
+  }
+
+  .wa-float svg, .fb-float svg {
+    width:26px;
+    height:26px;
+  }
+
+  .share-float svg{ width:20px; height:20px; }
+
+  .share-toast{ left:88px; font-size:12.5px; padding:9px 14px;}
+
+  .about-imgs .ph:first-child {
+    grid-row: auto;
+  }
+}

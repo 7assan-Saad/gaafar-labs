@@ -11,19 +11,22 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers</title>
+    <title>الوظائف | معامل أ.د. عبد الله جعفر</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet"></link>
+    <link href="./css/global.css" rel="stylesheet"></link>
+    <link href="./css/form.css" rel="stylesheet"></link>
+    <link href="./css/faq.css" rel="stylesheet"></link>
     <link href="./css/careers.css" rel="stylesheet"></link>
+    <link href="./css/responsive.css" rel="stylesheet"></link>
   </head>
 
   <body>
 
     <!-- ===== هيرو الوظائف ===== -->
-    <section class="sec-dark job-hero">
-      <div class="container job-hero-in">
+    <section class="sec-dark hero">
+      <div class="container hero-in">
         <div>
           <div class="hero-badge">
             <span class="dot"></span>
@@ -34,7 +37,7 @@
             نبحث عن أشخاص يحبون الدقة، ويهتمون بالتفاصيل، ويؤمنون أن التحليل الطبي أمانة.
             إذا كنت تبحث عن بيئة عمل محترمة ومسار واضح للتطور، فمكانك معنا.
           </p>
-          <div class="job-hero-btns">
+          <div class="hero-btns">
             <a href="careers/#positions" class="btn btn-red">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 13.255A23.931 23.931 0 0 1 12 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2m4 6h.01M5 20h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>
               تصفح الوظائف المتاحة
@@ -58,172 +61,333 @@
           <p>جميع الوظائف تشمل فترة تأهيل وتدريب قبل الانطلاق الفعلي في العمل.</p>
           <div class="sec-line"></div>
         </div>
-    
+
         <div class="job-tabs reveal" id="jobTabs">
           <button class="jtab on" data-cat="all">كل الوظائف</button>
-          <button class="jtab" data-cat="labs">التحاليل</button>
-          <button class="jtab" data-cat="patients">خدمة المرضى</button>
-          <button class="jtab" data-cat="quality">الجودة</button>
-          <button class="jtab" data-cat="sales">التسويق</button>
+          <button class="jtab" data-cat="medical">الطبي</button>
+          <button class="jtab" data-cat="management">الإدارة</button>
+          <button class="jtab" data-cat="quality">الجودة والسلامة</button>
+          <button class="jtab" data-cat="marketing">التسويق</button>
+          <button class="jtab" data-cat="it">تقنية المعلومات</button>
+          <button class="jtab" data-cat="support">الخدمات المعاونة</button>
         </div>
-    
+
         <div class="jobs-grid">
-    
-          <!-- أخصائي تحاليل -->
-          <article class="job-card reveal" data-cat="labs">
+
+          <!-- 1. مدير فرع -->
+          <article class="job-card reveal" data-cat="management">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+              </div>
+              <div>
+                <h3>مدير فرع</h3>
+                <span class="dept">الإدارة العليا</span>
+              </div>
+            </div>
+            <p class="desc">إدارة الفرع بالكامل تشغيلياً وإدارياً، ومتابعة الأداء والمبيعات وجودة الخدمة.</p>
+            <ul class="job-req">
+              <li>مؤهل عالٍ (إدارة أعمال / تجارة / علوم طبية)</li>
+              <li>خبرة في إدارة المعامل أو المراكز الطبية</li>
+              <li>مهارات قيادية وإدارة فريق</li>
+              <li>القدرة على اتخاذ القرار وتحمل المسؤولية</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="مدير فرع">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 2. أطباء باثولوجيا إكلينيكية -->
+          <article class="job-card reveal" data-cat="medical">
             <div class="job-card-head">
               <div class="ic">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4.5 17a3 3 0 0 0 2.6 4.5h9.8A3 3 0 0 0 19.5 17L15 8.5V2"/><path d="M8 2h8"/><path d="M7 14h10"/></svg>
               </div>
               <div>
-                <h3>أخصائي تحاليل طبية</h3>
-                <span class="dept">قسم التحاليل</span>
+                <h3>أطباء باثولوجيا إكلينيكية</h3>
+                <span class="dept">التحاليل الطبية</span>
               </div>
             </div>
-            <div class="job-tags">
-              <span class="red">دوام كامل</span>
-              <span>العامرية / العجمي</span>
-              <span>خبرة مطلوبة</span>
-            </div>
-            <p class="desc">تشغيل الأجهزة المعملية، مراجعة النتائج، والتأكد من مطابقتها لمعايير ضبط الجودة.</p>
+            <p class="desc">الإشراف الطبي على التحاليل، مراجعة النتائج، وإصدار التقارير الطبية المعتمدة.</p>
             <ul class="job-req">
-              <li>بكالوريوس علوم / طب / صيدلة بتخصص تحاليل طبية</li>
-              <li>خبرة عملية في معمل تحاليل (سنة على الأقل)</li>
-              <li>إجادة العمل على أجهزة الكيمياء والمناعة</li>
-              <li>دقة وأمانة في تسجيل النتائج</li>
+              <li>بكالوريوس طب وجراحة</li>
+              <li>ماجستير أو دكتوراه في الباثولوجيا الإكلينيكية</li>
+              <li>ترخيص مزاولة المهنة ساري</li>
+              <li>خبرة في مراجعة وتفسير نتائج التحاليل</li>
             </ul>
-            <button type="button" class="btn btn-red" data-job="أخصائي تحاليل طبية">قدم على الوظيفة</button>
+            <button type="button" class="btn btn-red" data-job="أطباء باثولوجيا إكلينيكية">قدم على الوظيفة</button>
           </article>
-    
-          <!-- فني سحب -->
-          <article class="job-card reveal" data-cat="patients">
-            <div class="job-card-head">
-              <div class="ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
-              </div>
-              <div>
-                <h3>فني سحب عينات</h3>
-                <span class="dept">قسم السحب وخدمة المرضى</span>
-              </div>
-            </div>
-            <div class="job-tags">
-              <span class="red">دوام كامل أو جزئي</span>
-              <span>الفرعان</span>
-              <span class="green">يقبل حديثي التخرج</span>
-            </div>
-            <p class="desc">سحب العينات داخل المعمل والزيارات المنزلية، مع الالتزام الكامل بمعايير التعقيم والسلامة.</p>
-            <ul class="job-req">
-              <li>دبلوم أو بكالوريوس في مجال طبي</li>
-              <li>مهارة في سحب الدم من الكبار والأطفال</li>
-              <li>لباقة وحسن تعامل مع المرضى</li>
-              <li>رخصة قيادة (ميزة إضافية للزيارات المنزلية)</li>
-            </ul>
-            <button type="button" class="btn btn-red" data-job="فني سحب عينات">قدم على الوظيفة</button>
-          </article>
-    
-          <!-- استقبال -->
-          <article class="job-card reveal" data-cat="patients">
-            <div class="job-card-head">
-              <div class="ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <div>
-                <h3>موظف / موظفة استقبال</h3>
-                <span class="dept">خدمة العملاء</span>
-              </div>
-            </div>
-            <div class="job-tags">
-              <span class="red">دوام كامل</span>
-              <span>فرع العجمي</span>
-            </div>
-            <p class="desc">استقبال المرضى، تسجيل البيانات على النظام، وتنسيق المواعيد والرد على استفسارات الواتساب.</p>
-            <ul class="job-req">
-              <li>مؤهل عالٍ</li>
-              <li>مهارات تواصل ولباقة عالية</li>
-              <li>إجادة استخدام الحاسب والواتساب</li>
-              <li>خبرة في الاستقبال أو خدمة العملاء (ميزة)</li>
-            </ul>
-            <button type="button" class="btn btn-red" data-job="موظف / موظفة استقبال">قدم على الوظيفة</button>
-          </article>
-    
-          <!-- جودة -->
+
+          <!-- 3. مدير جودة -->
           <article class="job-card reveal" data-cat="quality">
             <div class="job-card-head">
               <div class="ic">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
               </div>
               <div>
-                <h3>مسؤول ضبط جودة</h3>
-                <span class="dept">قسم الجودة</span>
+                <h3>مدير جودة</h3>
+                <span class="dept">الجودة</span>
               </div>
             </div>
-            <div class="job-tags">
-              <span class="red">دوام كامل</span>
-              <span>فرع العامرية</span>
-              <span>خبرة مطلوبة</span>
-            </div>
-            <p class="desc">متابعة برامج ضبط الجودة الداخلية والخارجية، وتوثيق المعايرة والمراجعات الدورية.</p>
+            <p class="desc">تطبيق ومتابعة نظام إدارة الجودة ISO 15189، وإعداد المراجعات والتقارير الدورية.</p>
             <ul class="job-req">
-              <li>بكالوريوس علوم / طب</li>
-              <li>خبرة في أنظمة الجودة (ISO 15189)</li>
-              <li>معرفة ببرامج إدارة المعامل LIMS</li>
+              <li>بكالوريوس علوم / طب / صيدلة</li>
+              <li>خبرة في جودة المعامل الطبية</li>
+              <li>معرفة عملية بـ ISO 15189 وضبط الجودة</li>
               <li>دقة عالية في التوثيق وكتابة التقارير</li>
             </ul>
-            <button type="button" class="btn btn-red" data-job="مسؤول ضبط جودة">قدم على الوظيفة</button>
+            <button type="button" class="btn btn-red" data-job="مدير جودة">قدم على الوظيفة</button>
           </article>
-    
-          <!-- تسويق -->
-          <article class="job-card reveal" data-cat="sales">
+
+          <!-- 4. مسئول السلامة والصحة المهنية أو مكافحة العدوي -->
+          <article class="job-card reveal" data-cat="quality">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h3>مسئول السلامة والصحة المهنية أو مكافحة العدوي</h3>
+                <span class="dept">السلامة والصحة المهنية</span>
+              </div>
+            </div>
+            <p class="desc">تطبيق سياسات السلامة ومكافحة العدوى، وتدريب الفريق على البروتوكولات ومتابعة الالتزام.</p>
+            <ul class="job-req">
+              <li>مؤهل طبي أو علمي مناسب</li>
+              <li>دورة معتمدة في مكافحة العدوى أو السلامة المهنية</li>
+              <li>خبرة سابقة في المجال</li>
+              <li>مهارات تدريب وتوعية للفريق</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="مسئول السلامة والصحة المهنية أو مكافحة العدوي">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 5. مدير تسويق -->
+          <article class="job-card reveal" data-cat="marketing">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+              </div>
+              <div>
+                <h3>مدير تسويق</h3>
+                <span class="dept">التسويق</span>
+              </div>
+            </div>
+            <p class="desc">وضع الخطط التسويقية، إدارة فريق التسويق، ومتابعة الحملات والعروض الموسمية.</p>
+            <ul class="job-req">
+              <li>بكالوريوس تسويق / إدارة أعمال</li>
+              <li>خبرة في التسويق الطبي أو الخدمات الصحية</li>
+              <li>مهارات قيادية وإدارة فريق</li>
+              <li>القدرة على تحليل السوق ووضع الخطط</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="مدير تسويق">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 6. مسئول دعاية طبية -->
+          <article class="job-card reveal" data-cat="marketing">
             <div class="job-card-head">
               <div class="ic">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
               </div>
               <div>
-                <h3>مندوب تسويق طبي</h3>
-                <span class="dept">قسم التسويق</span>
+                <h3>مسئول دعاية طبية</h3>
+                <span class="dept">التسويق</span>
               </div>
             </div>
-            <div class="job-tags">
-              <span class="red">دوام كامل</span>
-              <span>الإسكندرية</span>
-              <span>خبرة مطلوبة</span>
-            </div>
-            <p class="desc">بناء علاقات مع الأطباء والعيادات والشركات، وتنفيذ خطط التسويق والعروض الموسمية.</p>
+            <p class="desc">تنفيذ الحملات الدعائية والزيارات الميدانية للأطباء والعيادات والمراكز الطبية.</p>
             <ul class="job-req">
-              <li>مؤهل عالٍ (تسويق / صيدلة / علوم)</li>
-              <li>خبرة في التسويق الطبي</li>
-              <li>شبكة علاقات مع الأطباء والعيادات</li>
-              <li>رخصة قيادة سارية</li>
+              <li>مؤهل عالٍ</li>
+              <li>خبرة في الدعاية الطبية أو التسويق الميداني</li>
+              <li>مهارات تواصل ولباقة عالية</li>
+              <li>رخصة قيادة سارية (ميزة إضافية)</li>
             </ul>
-            <button type="button" class="btn btn-red" data-job="مندوب تسويق طبي">قدم على الوظيفة</button>
+            <button type="button" class="btn btn-red" data-job="مسئول دعاية طبية">قدم على الوظيفة</button>
           </article>
-    
-          <!-- فني معمل -->
-          <article class="job-card reveal" data-cat="labs">
+
+          <!-- 7. تعاقدات وتسويق -->
+          <article class="job-card reveal" data-cat="marketing">
             <div class="job-card-head">
               <div class="ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4.5 17a3 3 0 0 0 2.6 4.5h9.8A3 3 0 0 0 19.5 17L15 8.5V2"/><path d="M8 2h8"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
               </div>
               <div>
-                <h3>فني معمل</h3>
-                <span class="dept">قسم التحاليل</span>
+                <h3>تعاقدات وتسويق</h3>
+                <span class="dept">التسويق</span>
               </div>
             </div>
-            <div class="job-tags">
-              <span class="red">دوام كامل</span>
-              <span>فرع العجمي</span>
-              <span class="green">يقبل حديثي التخرج</span>
-            </div>
-            <p class="desc">تنفيذ التحاليل الروتينية، تحضير العينات، والحفاظ على نظافة وسلامة بيئة العمل.</p>
+            <p class="desc">التعاقد مع الشركات والمؤسسات والمدارس، وإدارة عقود الفحوصات الدورية.</p>
             <ul class="job-req">
-              <li>دبلوم أو بكالوريوس في مجال طبي</li>
-              <li>خبرة في التحاليل الروتينية (ميزة)</li>
-              <li>القدرة على العمل تحت ضغط</li>
-              <li>الالتزام بمواعيد العمل والبروتوكولات</li>
+              <li>مؤهل عالٍ</li>
+              <li>خبرة في التعاقدات أو المبيعات المؤسسية</li>
+              <li>مهارات تفاوض وإقناع</li>
+              <li>القدرة على بناء علاقات طويلة المدى</li>
             </ul>
-            <button type="button" class="btn btn-red" data-job="فني معمل">قدم على الوظيفة</button>
+            <button type="button" class="btn btn-red" data-job="تعاقدات وتسويق">قدم على الوظيفة</button>
           </article>
-    
+
+          <!-- 8. أخصائي موارد بشرية -->
+          <article class="job-card reveal" data-cat="management">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3>أخصائي موارد بشرية</h3>
+                <span class="dept">الموارد البشرية</span>
+              </div>
+            </div>
+            <p class="desc">التوظيف، إدارة ملفات الموظفين، ومتابعة الحضور والانصراف والإجازات.</p>
+            <ul class="job-req">
+              <li>بكالوريوس إدارة أعمال / تجارة</li>
+              <li>خبرة في الموارد البشرية</li>
+              <li>معرفة بقانون العمل</li>
+              <li>إجادة برامج HR والحاسب</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="أخصائي موارد بشرية">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 9. محاسب -->
+          <article class="job-card reveal" data-cat="management">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+              </div>
+              <div>
+                <h3>محاسب</h3>
+                <span class="dept">الحسابات</span>
+              </div>
+            </div>
+            <p class="desc">إمساك الدفاتر، إعداد التقارير المالية، ومتابعة الفواتير والتحصيل.</p>
+            <ul class="job-req">
+              <li>بكالوريوس تجارة / محاسبة</li>
+              <li>خبرة في المحاسبة</li>
+              <li>إجادة برامج المحاسبة</li>
+              <li>دقة وأمانة في التسجيل</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="محاسب">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 10. تكنولوجيا المعلومات - IT -->
+          <article class="job-card reveal" data-cat="it">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div>
+                <h3>تكنولوجيا المعلومات - IT</h3>
+                <span class="dept">تقنية المعلومات</span>
+              </div>
+            </div>
+            <p class="desc">صيانة الأجهزة والشبكات، دعم نظام إدارة المعامل LIMS، وحماية البيانات.</p>
+            <ul class="job-req">
+              <li>بكالوريوس حاسبات ومعلومات / IT</li>
+              <li>معرفة بأنظمة إدارة المعامل (ميزة)</li>
+              <li>القدرة على حل المشكلات التقنية بسرعة</li>
+              <li>خبرة سابقة في المجال</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="تكنولوجيا المعلومات - IT">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 11. تمريض سحب عينات -->
+          <article class="job-card reveal" data-cat="medical">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <div>
+                <h3>تمريض سحب عينات</h3>
+                <span class="dept">قسم السحب</span>
+              </div>
+            </div>
+            <p class="desc">سحب العينات داخل المعمل والزيارات المنزلية، بمهارة واحترافية.</p>
+            <ul class="job-req">
+              <li>بكالوريوس أو دبلوم تمريض</li>
+              <li>ترخيص مزاولة المهنة</li>
+              <li>خبرة في سحب الدم من الكبار والأطفال</li>
+              <li>لباقة وحسن تعامل مع المرضى</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="تمريض سحب عينات">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 12. موظف استقبال -->
+          <article class="job-card reveal" data-cat="management">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <h3>موظف استقبال</h3>
+                <span class="dept">خدمة العملاء</span>
+              </div>
+            </div>
+            <p class="desc">استقبال المرضى، تسجيل البيانات على النظام، وتنسيق المواعيد والرد على الواتساب.</p>
+            <ul class="job-req">
+              <li>مؤهل عالٍ</li>
+              <li>مهارات تواصل ولباقة عالية</li>
+              <li>إجادة استخدام الحاسب والواتساب</li>
+              <li>خبرة في الاستقبال أو خدمة العملاء (ميزة)</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="موظف استقبال">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 13. إدارة المشتريات والمخازن -->
+          <article class="job-card reveal" data-cat="management">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <div>
+                <h3>إدارة المشتريات والمخازن</h3>
+                <span class="dept">المشتريات</span>
+              </div>
+            </div>
+            <p class="desc">إدارة عمليات الشراء والمخزون، والتنسيق مع الموردين لضمان توافر المستلزمات.</p>
+            <ul class="job-req">
+              <li>بكالوريوس تجارة / إدارة أعمال</li>
+              <li>خبرة في المشتريات أو إدارة المخازن</li>
+              <li>مهارات تفاوض مع الموردين</li>
+              <li>إجادة برامج إدارة المخزون</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="إدارة المشتريات والمخازن">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 14. أمين مخزن -->
+          <article class="job-card reveal" data-cat="management">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+              </div>
+              <div>
+                <h3>أمين مخزن</h3>
+                <span class="dept">المخازن</span>
+              </div>
+            </div>
+            <p class="desc">استلام وصرف المواد والمستلزمات، ومتابعة الجرد الدوري للمخزون.</p>
+            <ul class="job-req">
+              <li>مؤهل متوسط أو عالٍ</li>
+              <li>خبرة في العمل</li>
+              <li>دقة في التسجيل والجرد</li>
+              <li>الالتزام بمواعيد العمل</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="أمين مخزن">قدم على الوظيفة</button>
+          </article>
+
+          <!-- 15. خدمات معاونة (عاملات نظافة) -->
+          <article class="job-card reveal" data-cat="support">
+            <div class="job-card-head">
+              <div class="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2L12 3z"/><path d="M19 15l.9 2.6L22.5 18l-2.6.9L19 21l-.9-2.1L15.5 18l2.6-.9L19 15z"/></svg>
+              </div>
+              <div>
+                <h3>خدمات معاونة ( عاملات نظافة )</h3>
+                <span class="dept">الخدمات المعاونة</span>
+              </div>
+            </div>
+            <p class="desc">نظافة المعمل والحفاظ على بيئة عمل نظيفة وآمنة وفق معايير مكافحة العدوى.</p>
+            <ul class="job-req">
+              <li>جدية والتزام في العمل</li>
+              <li>الالتزام بمواعيد العمل</li>
+              <li>الالتزام بتعليمات السلامة ومكافحة العدوى</li>
+            </ul>
+            <button type="button" class="btn btn-red" data-job="خدمات معاونة ( عاملات نظافة )">قدم على الوظيفة</button>
+          </article>
+
         </div>
       </div>
     </section>
@@ -283,13 +447,21 @@
                 <label for="jPosition">الوظيفة المتقدم لها <i>*</i></label>
                 <select id="jPosition" required>
                   <option value="">اختر الوظيفة</option>
-                  <option>أخصائي تحاليل طبية</option>
-                  <option>فني سحب عينات</option>
+                  <option>مدير فرع</option>
+                  <option>أطباء باثولوجيا إكلينيكية</option>
+                  <option>مدير جودة</option>
+                  <option>مسئول السلامة والصحة المهنية أو مكافحة العدوي</option>
+                  <option>مدير تسويق</option>
+                  <option>مسئول دعاية طبية</option>
+                  <option>تعاقدات وتسويق</option>
+                  <option>أخصائي موارد بشرية</option>
+                  <option>محاسب</option>
+                  <option>تكنولوجيا المعلومات - IT</option>
+                  <option>تمريض سحب عينات</option>
                   <option>موظف / موظفة استقبال</option>
-                  <option>مسؤول ضبط جودة</option>
-                  <option>مندوب تسويق طبي</option>
-                  <option>فني معمل</option>
-                  <option>تقديم عام (سيرة ذاتية)</option>
+                  <option>إدارة المشتريات والمخازن</option>
+                  <option>أمين مخزن</option>
+                  <option>خدمات معاونة ( عاملات نظافة )</option>
                 </select>
               </div>
               <div class="field">

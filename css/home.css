@@ -1,0 +1,342 @@
+
+.hero-vector {
+  position: absolute;
+  width: 450px;
+}
+
+.vector-left {
+  top: -50px;
+  left: -20px;
+}
+@media(max-width: 500px) {
+  .vector-left {
+    left: -45px;
+  }
+}
+
+.vector-right {
+  bottom: -80px;
+  right: -40px;
+  transform: rotate(180deg);
+}
+
+.hero-feats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.hero-feats div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14.5px;
+  color: #d6d8dd;
+  font-weight: 600;
+}
+
+.hero-feats svg {
+  width: 18px;
+  height: 18px;
+  color: var(--red);
+}
+
+/* بطاقة الهيرو الجانبية */
+.hero-card {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end
+}
+
+.discount-flash {
+  overflow: hidden;
+  position: absolute;
+  width: 300px;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+}
+
+.hero-card h3 {
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  z-index: 501;
+}
+
+.hero-card, .hero-card .sub {
+  background: linear-gradient(160deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .03));
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 26px;
+  padding: 32px;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-card .sub {
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--white);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+}
+
+.hero-card .btn {
+  width: 100%;
+}
+
+/* ============ شريط الميزات ============ */
+.features {
+  background: var(--red);
+  padding: 0;
+}
+
+.features-in {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.feat {
+  padding: 30px 24px;
+  text-align: center;
+  color: var(--white);
+  transition: var(--trans);
+}
+
+.feat svg {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.feat h4 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.feat p {
+  font-size: 13px;
+  opacity: .9;
+}
+
+/* ============ الإحصائيات ============ */
+.stats {
+  background: var(--black);
+  color: var(--white);
+  padding: 75px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats::before {
+  content: '';
+  position: absolute;
+  top: -180px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(216, 20, 28, .32), transparent 70%);
+  border-radius: 50%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.stat {
+  text-align: center;
+  padding: 22px 12px;
+  border-left: 1px solid rgba(255, 255, 255, .1);
+}
+
+.stat:last-child {
+  border-left: none;
+}
+
+.stat b {
+  display: block;
+  font-size: clamp(32px, 5vw, 50px);
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1.2;
+}
+
+.stat span {
+  font-size: 15px;
+  color: #b9bcc4;
+  font-weight: 600;
+}
+
+/* ============ برنامج النقاط والخصومات ============ */
+.loyal-hero {
+  background: linear-gradient(135deg, var(--red), #7a0a10);
+  border-radius: 24px;
+  padding: 52px 46px;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loyal-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .045) 0 14px, transparent 14px 28px);
+}
+
+.loyal-hero h3 {
+  font-size: clamp(24px, 3.6vw, 36px);
+  font-weight: 900;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.loyal-hero p {
+  font-size: 16.5px;
+  opacity: .95;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.loyal-hero .btn {
+  background: var(--white);
+  color: var(--red);
+  position: relative;
+  z-index: 2;
+}
+
+.loyal-hero .btn:hover {
+  background: #ffe9ea;
+}
+
+.loyal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.loyal-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--red);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  transition: var(--trans);
+}
+
+.loyal-card .ic {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.loyal-card .ic svg {
+  width: 25px;
+  height: 25px;
+  color: var(--red);
+}
+
+.loyal-card h4 {
+  font-size: 17.5px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.loyal-card ul {
+  display: grid;
+  gap: 8px;
+}
+
+.loyal-card li {
+  font-size: 14.5px;
+  color: var(--gray);
+  padding-right: 18px;
+  position: relative;
+}
+
+.loyal-card li::before {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: 11px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+/* الأيام العالمية */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.day {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 14px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: var(--trans);
+}
+
+.day:nth-of-type(2),
+.day:nth-of-type(4) {
+  background: var(--red);
+}
+
+.day svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 12px;
+  color: var(--red);
+  transition: var(--trans);
+}
+
+.day:nth-of-type(2) svg,
+.day:nth-of-type(4) svg {
+  color: var(--white);
+}
+
+.day b {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.day span {
+  font-size: 12.5px;
+  opacity: .8;
+}

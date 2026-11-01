@@ -1,22 +1,4 @@
 
-/* الهيرو */
-.job-hero{position:relative;overflow:hidden;padding:85px 0 95px}
-.job-hero::before{
-  content:'';position:absolute;top:-200px;left:-140px;width:600px;height:600px;
-  background:radial-gradient(circle,rgba(216,20,28,.4),transparent 68%);
-  border-radius:50%;filter:blur(28px);
-}
-.job-hero::after{
-  content:'';position:absolute;bottom:-240px;right:-160px;width:600px;height:600px;
-  background:radial-gradient(circle,rgba(82,85,95,.5),transparent 70%);
-  border-radius:50%;filter:blur(28px);
-}
-.job-hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:center}
-.job-hero h1{font-size:clamp(28px,4.6vw,50px);font-weight:900;line-height:1.8;margin-bottom:15px;color:var(--white)}
-.job-hero h1 span{display:block;color:var(--red)}
-.job-hero .lead{font-size:17px;color:#b9bcc4;max-width:590px;margin-bottom:30px;font-weight:400}
-.job-hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-
 /* المزايا */
 .job-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .job-benefit{
@@ -122,14 +104,12 @@
 
 /* الاستجابة */
 @media(max-width:1080px){
-  .job-hero-in,.apply-wrap{grid-template-columns:1fr}
   .job-benefits{grid-template-columns:1fr 1fr}
   .process{grid-template-columns:1fr 1fr 1fr}
   .jobs-grid{grid-template-columns:1fr}
 }
+
 @media(max-width:680px){
-  .job-hero{padding:60px 0 70px}
-  .job-hero-btns .btn{width:100%}
   .job-benefits,.process{grid-template-columns:1fr}
   .apply-side,.apply-form{padding:34px 22px}
   .job-card{padding:22px 20px}

@@ -1,0 +1,253 @@
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1c21, #3d4049 55%, #0a0b0d);
+  border-radius: var(--radius);
+  color: rgba(255, 255, 255, .65);
+  font-weight: 700;
+  font-size: 15px;
+  min-height: 220px;
+  border: 1px solid rgba(0, 0, 0, .06);
+}
+
+.ph::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .028) 0 12px, transparent 12px 24px), radial-gradient(circle at 78% 18%, rgba(216, 20, 28, .34), transparent 58%);
+}
+
+.ph span {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 16px;
+}
+
+.ph svg {
+  width: 38px;
+  height: 38px;
+  color: var(--red);
+}
+
+.about-txt h2 {
+  font-size: clamp(25px, 3.6vw, 38px);
+  font-weight: 800;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.about-txt h2 span {
+  color: var(--red);
+}
+
+.about-txt p {
+  color: var(--gray);
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.quality-certificate {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-btn, .booking-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+}
+
+@media (min-width: 600px) {
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+  .quality-certificate {
+    margin-top: 18px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .booking-btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.about-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.about-list li {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.about-list svg {
+  width: 20px;
+  height: 20px;
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* الرؤية والرسالة */
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 65px;
+}
+
+.vm-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 26px;
+  transition: var(--trans);
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--red);
+}
+
+.vm-ico {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(216, 20, 28, .09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.vm-ico svg {
+  width: 28px;
+  height: 28px;
+  color: var(--red);
+}
+
+.vm-card h3 {
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.vm-card p {
+  color: var(--gray);
+  font-size: 15px;
+}
+
+/* الاعتمادات */
+.certs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 55px;
+}
+
+.cert {
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  padding: 24px 18px;
+  transition: var(--trans);
+}
+
+.cert svg {
+  width: 32px;
+  height: 32px;
+  color: var(--red);
+  margin: 0 auto 12px;
+}
+
+.cert b {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.cert span {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* الأجهزة */
+.devices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.device {
+  background: var(--black);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  transition: var(--trans);
+  border: 1px solid rgba(255, 255, 255, .07);
+}
+
+.device .n {
+  font-size: 34px;
+  font-weight: 900;
+  color: rgba(216, 20, 28, .55);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.device h4 {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.device p {
+  font-size: 14px;
+  color: #a9acb4;
+}

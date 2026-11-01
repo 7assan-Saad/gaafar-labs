@@ -1,0 +1,109 @@
+/* ===== تبويبات الأسئلة الشائعة ===== */
+.faq-tabs{
+  display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
+  margin-bottom:38px;
+}
+.ftab{
+  padding:11px 22px;border-radius:50px;border:2px solid var(--line);
+  background:var(--white);font-weight:700;font-size:14px;cursor:pointer;
+  transition:var(--trans);color:var(--gray);white-space:nowrap;
+}
+.ftab:hover{border-color:var(--red);color:var(--red)}
+.ftab.on{background:var(--black);border-color:var(--black);color:var(--white)}
+
+@media(max-width:680px){
+  .ftab{font-size:13px;padding:9px 16px}
+}
+
+.faq-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.faq {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: var(--trans);
+}
+
+.faq.on {
+  border-color: var(--red);
+  box-shadow: 0 10px 30px rgba(216, 20, 28, .1);
+}
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 26px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  text-align: right;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.faq-q .plus {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--light);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trans);
+  position: relative;
+}
+
+.faq-q .plus::before,
+.faq-q .plus::after {
+  content: '';
+  position: absolute;
+  background: var(--black);
+  border-radius: 2px;
+  transition: var(--trans);
+}
+
+.faq-q .plus::before {
+  width: 13px;
+  height: 2px;
+}
+
+.faq-q .plus::after {
+  width: 2px;
+  height: 13px;
+}
+
+.faq.on .faq-q .plus {
+  background: var(--red);
+}
+
+.faq.on .faq-q .plus::before,
+.faq.on .faq-q .plus::after {
+  background: var(--white);
+}
+
+.faq.on .faq-q .plus::after {
+  transform: scaleY(0);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+
+.faq-a p {
+  padding: 0 26px 24px;
+  color: var(--gray);
+  font-size: 15.5px;
+}

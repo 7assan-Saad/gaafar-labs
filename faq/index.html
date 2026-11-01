@@ -10,7 +10,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معامل الدكتور / عبد الله جعفر للتحاليل الطبية</title>
+    <title>الأسئلة الشائعة | معامل أ.د. عبد الله جعفر</title>
     <meta name="description"
       content="معامل الدكتور عبد الله جعفر للتحاليل الطبية - دقة في النتائج، أحدث الأجهزة، سحب العينة من المنزل مجاناً، وخدمة شرح النتائج. احجز موعدك الآن.">
     <meta name="keywords"
@@ -20,7 +20,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet"></link>
+    <link href="./css/global.css" rel="stylesheet"></link>
+    <link href="./css/faq.css" rel="stylesheet"></link>
+    <link href="./css/responsive.css" rel="stylesheet"></link>
   </head>
   <body>
 
@@ -64,77 +66,159 @@
       </div>
     </header>
 
-    <section class="sec">
+    <!-- ===================== 8. الأسئلة الشائعة ===================== -->
+    <section class="sec" id="faq">
       <div class="container">
         <div class="sec-head reveal">
           <span class="sec-tag">الأسئلة الشائعة</span>
-          <h2>كل ما تريد <span>معرفته</span></h2>
-          <p>إجابات سريعة على أكثر الأسئلة التي تصلنا من المرضى.</p>
+          <h2>أسئلة <span>المرضى</span> عن التحاليل الطبية</h2>
+          <p>25 سؤالاً وجواباً عملياً — دليل تثقيفي من معامل الدكتور عبد الله جعفر.</p>
           <div class="sec-line"></div>
         </div>
 
+        <div class="faq-tabs reveal" id="faqTabs">
+          <button class="ftab on" data-faq="all">كل الأسئلة</button>
+          <button class="ftab" data-faq="fasting">الصيام</button>
+          <button class="ftab" data-faq="meds">الأدوية والفيتامينات</button>
+          <button class="ftab" data-faq="hormones">الهرمونات والخصوبة</button>
+          <button class="ftab" data-faq="accuracy">دقة النتائج</button>
+          <button class="ftab" data-faq="samples">البول والبراز</button>
+          <button class="ftab" data-faq="results">النتائج وموعدها</button>
+        </div>
+
         <div class="faq-wrap">
-          <div class="faq reveal">
-            <button class="faq-q">هل يلزم الصيام قبل التحليل؟ <span class="plus"></span></button>
-            <div class="faq-a">
-              <p>يعتمد على نوع التحليل. تحاليل السكر والكوليسترول ووظائف الكبد والكلى تحتاج صياماً من 8 إلى 12 ساعة، بينما
-                صورة الدم الكاملة وتحاليل الغدة الدرقية وفيتامين د لا تحتاج صياماً. يُسمح بشرب الماء أثناء الصيام. فريق
-                الحجز سيخبرك بالتعليمات الخاصة بتحليلك.</p>
-            </div>
+
+          <!-- ===== 1. الصيام ===== -->
+          <div class="faq reveal" data-faq="fasting">
+            <button class="faq-q">هل جميع التحاليل تحتاج إلى صيام؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>لا. تحاليل مثل CBC وصورة الدم، والسكر التراكمي HbA1c، ومعظم تحاليل الغدة الدرقية لا تحتاج إلى صيام عادةً. بعض التحاليل تتطلب الصيام حسب طلب الطبيب والطريقة المستخدمة.</p></div>
           </div>
 
-          <div class="faq reveal">
-            <button class="faq-q">متى تظهر النتائج؟ <span class="plus"></span></button>
-            <div class="faq-a">
-              <p>معظم التحاليل الروتينية مثل صورة الدم والسكر ووظائف الكبد والكلى تظهر نتائجها في نفس اليوم. بعض التحاليل
-                المتخصصة مثل الهرمونات وبعض الفحوصات المناعية قد تحتاج من 24 إلى 72 ساعة. يمكنك استلام النتيجة إلكترونياً
-                عبر الواتساب أو استلامها ورقياً من الفرع.</p>
-            </div>
+          <div class="faq reveal" data-faq="fasting">
+            <button class="faq-q">كم ساعة يجب الصيام قبل التحليل؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>يعتمد ذلك على التحليل؛ سكر الصائم يحتاج عادةً إلى 8 ساعات، وقد تطلب بعض الفحوص الأخرى 8-12 ساعة. اتبع تعليمات المعمل تحديدًا.</p></div>
           </div>
 
-          <div class="faq reveal">
-            <button class="faq-q">كيف أستعد للتحليل؟ <span class="plus"></span></button>
-            <div class="faq-a">
-              <p>احرص على النوم الجيد قبل التحليل، وتجنّب المجهود البدني العنيف، وأخبر الفريق الطبي بكل الأدوية والمكملات
-                التي تتناولها. اتبع تعليمات الصيام إذا كان مطلوباً، ولا توقف أي دواء من تلقاء نفسك دون استشارة طبيبك.
-                يمكنك الاطلاع على قسم «كل المعلومات التي تحتاجها قبل حجز التحليل» في الموقع.</p>
-            </div>
+          <div class="faq reveal" data-faq="fasting">
+            <button class="faq-q">هل يمكن شرب الماء أثناء الصيام؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>نعم، الماء العادي مسموح عادةً. أما القهوة والشاي والعصائر والمشروبات المحلاة فلا تُعد بديلًا عن الماء أثناء الصيام المطلوب.</p></div>
           </div>
 
-          <div class="faq reveal">
-            <button class="faq-q">هل يمكن سحب العينة من المنزل؟ <span class="plus"></span></button>
-            <div class="faq-a">
-              <p>نعم، نوفر خدمة سحب العينة من المنزل مجاناً داخل النطاق الجغرافي المحدد، بفريق متخصص يستخدم أدوات معقمة
-                لمرة واحدة. يمكنك طلب الخدمة من خلال نموذج الحجز في الموقع أو عبر الواتساب، وسيتم تحديد الموعد المناسب لك.
-              </p>
-            </div>
+          <div class="faq reveal" data-faq="fasting">
+            <button class="faq-q">ماذا أفعل إذا أكلت قبل تحليل يتطلب الصيام؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>أخبر موظف المعمل بموعد آخر وجبة وما تناولته؛ فقد يلزم تأجيل التحليل أو يمكن إجراؤه وفق تقييم نوع الاختبار.</p></div>
           </div>
 
-          <div class="faq reveal">
-            <button class="faq-q">هل توجد خصومات أو اشتراكات؟ <span class="plus"></span></button>
-            <div class="faq-a">
-              <p>نعم، لدينا برنامج نقاط وخصومات متكامل يشمل: خصم 50% على التحليل الشامل، خصومات على كل تحليل، تحليل مجاني
-                بعد عدد معين من الزيارات، خصومات جماعية للعائلات والشركات والمدارس، خصومات لكبار السن والطلاب وذوي
-                الاحتياجات الخاصة، اشتراكات شهرية وسنوية للمرضى المحتاجين لتحاليل متكررة، وعروض موسمية. تفاصيل كاملة في
-                قسم «برنامج النقاط والخصومات».</p>
-            </div>
+          <div class="faq reveal" data-faq="fasting">
+            <button class="faq-q">هل التدخين يؤثر في نتائج التحاليل؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>قد يؤثر في بعض القياسات، لذلك يُفضّل تجنبه قبل السحب، والامتناع عنه خلال فترة الصيام المطلوبة.</p></div>
           </div>
 
-          <div class="faq reveal">
-            <button class="faq-q">هل يمكنني الحصول على شرح لنتائجي؟ <span class="plus"></span></button>
-            <div class="faq-a">
-              <p>بالتأكيد. نوفر خدمة شرح النتائج مع الطبيب لتفسير أرقام تقريرك بشكل مبسط، ومعرفة ما إذا كانت ضمن المعدل
-                الطبيعي، وما الخطوات التالية. يمكنك طلب الخدمة عند الحجز أو بعد استلام النتيجة.</p>
-            </div>
+          <!-- ===== 2. الأدوية ===== -->
+          <div class="faq reveal" data-faq="meds">
+            <button class="faq-q">هل أوقف الأدوية قبل التحليل؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>لا توقف أي دواء من تلقاء نفسك. أخبر الطبيب والمعمل بأسماء الأدوية والجرعات، لأن بعض الاختبارات تتطلب توقيتًا معينًا بالنسبة للجرعة.</p></div>
           </div>
 
-          <div class="faq reveal">
-            <button class="faq-q">هل نتائجي وبياناتي سرية؟ <span class="plus"></span></button>
-            <div class="faq-a">
-              <p>نعم، السرية الكاملة مبدأ أساسي لدينا. جميع بيانات المرضى ونتائجهم محفوظة بنظام إلكتروني آمن، ولا يتم
-                تسليم أي نتيجة إلا لصاحبها أو من يفوضه بشكل رسمي.</p>
-            </div>
+          <div class="faq reveal" data-faq="meds">
+            <button class="faq-q">هل فيتامينات الشعر والأظافر تؤثر في التحاليل؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>بعض المكملات التي تحتوي على البيوتين (Biotin أو B7) قد تؤثر في نتائج اختبارات الغدة الدرقية والهرمونات وغيرها. أخبر المعمل بالجرعة وموعد آخر تناول، واتبع تعليماته بشأن التوقف المؤقت إن لزم.</p></div>
           </div>
+
+          <div class="faq reveal" data-faq="meds">
+            <button class="faq-q">هل المضاد الحيوي يؤثر في المزرعة؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>نعم، قد يقلل فرصة نمو الميكروب. يُفضَّل جمع العينة قبل بدء المضاد الحيوي إن أمكن، لكن لا تؤخر علاجًا ضروريًا ولا توقف العلاج دون استشارة الطبيب.</p></div>
+          </div>
+
+          <!-- ===== 3. الهرمونات ===== -->
+          <div class="faq reveal" data-faq="hormones">
+            <button class="faq-q">هل تحليل الغدة الدرقية يحتاج إلى صيام؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>لا يحتاج TSH وFT4 وFT3 إلى الصيام عادةً، لكن توقيت السحب بالنسبة لدواء الغدة قد يكون مهمًا عند متابعة العلاج.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="hormones">
+            <button class="faq-q">لماذا يُطلب تحليل البرولاكتين صباحًا؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>لأن مستوى البرولاكتين يتأثر بالنوم والتوتر والمجهود. يُفضّل السحب صباحًا مع الجلوس بهدوء 20–30 دقيقة قبل العينة، وفق تعليمات المعمل.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="hormones">
+            <button class="faq-q">هل يجب إجراء تحليل الهرمونات في يوم معين من الدورة؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>بعض الهرمونات مثل FSH وLH وEstradiol قد يُطلب قياسها في أيام محددة، بينما يُحدد توقيت البروجستيرون حسب موعد التبويض والدورة المتوقعة.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="hormones">
+            <button class="faq-q">كم يومًا يجب الامتناع عن الجماع قبل تحليل السائل المنوي؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>عادةً من يومين إلى 7 أيام دون قذف، مع الالتزام بالمدة التي يحددها المعمل، وجمع العينة كاملة في العبوة المخصصة.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="hormones">
+            <button class="faq-q">هل الجماع يؤثر في تحليل PSA؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>قد يؤدي القذف إلى ارتفاع مؤقت لدى بعض الرجال؛ لذلك يُفضّل تجنبه لمدة 48 ساعة قبل التحليل، مع مراعاة الالتهابات والإجراءات الحديثة المتعلقة بالبروستاتا.</p></div>
+          </div>
+
+          <!-- ===== 4. دقة النتائج ===== -->
+          <div class="faq reveal" data-faq="accuracy">
+            <button class="faq-q">هل يمكن إجراء التحليل أثناء الدورة الشهرية؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>يمكن إجراء كثير من تحاليل الدم، لكن الدورة قد تؤثر في بعض النتائج، كما قد تلوث عينات البول. أخبري المعمل بوجود الدورة قبل جمع العينة.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="accuracy">
+            <button class="faq-q">لماذا يطلب الطبيب إعادة التحليل؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>قد يكون ذلك لتأكيد النتيجة، أو متابعة تغيرها بمرور الوقت، أو بسبب مشكلة في العينة أو تداخل دوائي أو اختلاف غير متوقع بين النتائج.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="accuracy">
+            <button class="faq-q">هل النتيجة خارج المعدل الطبيعي تعني وجود مرض؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>ليس بالضرورة. يجب تفسير النتيجة مع الأعراض والتاريخ المرضي والأدوية والعمر والجنس والمجال المرجعي الخاص بالمعمل.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="accuracy">
+            <button class="faq-q">هل تختلف نتائج التحليل من معمل لآخر؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>قد تختلف قليلًا بسبب الأجهزة والكواشف وطرق القياس والمجالات المرجعية. يُفضّل إجراء المتابعة في المعمل نفسه كلما أمكن، خصوصًا عند مقارنة النتائج عبر الزمن.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="accuracy">
+            <button class="faq-q">هل يمكن أن يؤثر الجفاف في نتائج التحاليل؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>نعم، قد يؤثر في بعض القياسات مثل تركيز الهيموجلوبين واليوريا وبعض الأملاح. حافظ على شرب الماء بصورة معتادة ما لم يطلب الطبيب خلاف ذلك.</p></div>
+          </div>
+
+          <!-- ===== 5. البول والبراز ===== -->
+          <div class="faq reveal" data-faq="samples">
+            <button class="faq-q">هل يجب أن تكون عينة البول أول عينة صباحية؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>تُفضَّل في بعض الفحوص، لكنها ليست شرطًا دائمًا. اتبع تعليمات الطبيب ونوع الاختبار، وخاصة في مزارع البول.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="samples">
+            <button class="faq-q">كيف أجمع عينة مزرعة البول بطريقة صحيحة؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>نظّف المنطقة، وابدأ التبول في المرحاض ثم اجمع منتصف البول في وعاء معقم دون لمس داخله، وأغلقه جيدًا وسلّمه سريعًا.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="samples">
+            <button class="faq-q">هل يجب الامتناع عن أطعمة معينة قبل تحليل البراز؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>معظم تحاليل البراز الروتينية لا تحتاج إلى صيام، لكن بعض الفحوص الخاصة قد تتطلب تعليمات محددة.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="samples">
+            <button class="faq-q">كيف أجمع بول 24 ساعة؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>تخلّص من أول عينة عند وقت البداية، وسجّل الوقت، ثم اجمع كل البول بعد ذلك حتى تضم عينة نهاية الفترة في نفس الوقت من اليوم التالي. اتبع تعليمات التخزين والعبوة التي يوفرها المعمل.</p></div>
+          </div>
+
+          <!-- ===== 6. النتائج ===== -->
+          <div class="faq reveal" data-faq="results">
+            <button class="faq-q">متى تظهر نتائج التحاليل؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>يختلف الوقت حسب الاختبار؛ كثير من التحاليل الروتينية تظهر في اليوم نفسه، بينما قد تستغرق الهرمونات المتخصصة أو المزارع أيامًا.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="results">
+            <button class="faq-q">هل أستطيع تفسير النتيجة بنفسي؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>يمكنك قراءة المجال المرجعي المطبوع في التقرير، لكن لا تعتمد على رقم منفرد للتشخيص أو تغيير العلاج. ناقش النتائج مع الطبيب المعالج.</p></div>
+          </div>
+
+          <div class="faq reveal" data-faq="results">
+            <button class="faq-q">ماذا أفعل إذا ظهرت نتيجة مرتفعة أو منخفضة جدًا؟ <span class="plus"></span></button>
+            <div class="faq-a"><p>تواصل مع الطبيب لتقييم النتيجة في سياق الحالة. وإذا أبلغك المعمل بأن النتيجة حرجة وتحتاج إلى تصرف عاجل، فلا تؤخر التواصل الطبي.</p></div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -172,8 +256,8 @@
               <li><a href="about/">عن المعمل</a></li>
               <li><a href="doctor/">عن الدكتور</a></li>
               <li><a href="services/">الخدمات والتحاليل</a></li>
-              <li><a href="services/">قبل التحليل</a></li>
               <li><a href="faq/">الأسئلة الشائعة</a></li>
+              <li><a href="careers/">الوظائف</a></li>
             </ul>
           </div>
 
@@ -185,7 +269,7 @@
               <li><a href="services/">تحاليل السكري والكلى</a></li>
               <li><a href="services/">تحاليل الهرمونات</a></li>
               <li><a href="services/">تحاليل الشركات</a></li>
-              <li><a href="discounts/">الخصومات والاشتراكات</a></li>
+              <li><a href="discounts/">الخصومات</a></li>
             </ul>
           </div>
 
