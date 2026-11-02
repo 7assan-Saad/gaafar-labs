@@ -184,159 +184,83 @@
   font-weight: 600;
 }
 
-/* ============ برنامج النقاط والخصومات ============ */
-.loyal-hero {
-  background: linear-gradient(135deg, var(--red), #7a0a10);
-  border-radius: 24px;
-  padding: 52px 46px;
-  color: var(--white);
-  text-align: center;
-  margin-bottom: 45px;
-  position: relative;
-  overflow: hidden;
+/* تعاقداتنا */
+
+.partners-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  max-width:880px;
+  margin:0 auto;
 }
 
-.loyal-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .045) 0 14px, transparent 14px 28px);
+.partner-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:34px 30px 28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  transition:var(--trans);
+  position:relative;
+  overflow:hidden;
+}
+.partner-card::before{
+  content:'';
+  position:absolute;
+  top:0;right:0;left:0;
+  height:4px;
+  background:var(--red);
 }
 
-.loyal-hero h3 {
-  font-size: clamp(24px, 3.6vw, 36px);
-  font-weight: 900;
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 2;
+/* حاوية اللوجو */
+.partner-logo {
+  width:100%;
+  height:130px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
 }
 
-.loyal-hero p {
-  font-size: 16.5px;
-  opacity: .95;
-  max-width: 720px;
-  margin: 0 auto 24px;
-  position: relative;
-  z-index: 2;
+.partner-logo img {
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
 }
 
-.loyal-hero .btn {
-  background: var(--white);
-  color: var(--red);
-  position: relative;
-  z-index: 2;
+/* نص البطاقة */
+.partner-card h3{
+  font-size:19px;
+  font-weight:800;
+  color:var(--black);
+  line-height:1.5;
 }
 
-.loyal-hero .btn:hover {
-  background: #ffe9ea;
+/* فاصل ختامي */
+.partners-note{
+  text-align:center;
+  margin-top:36px;
+  font-size:14px;
+  color:var(--gray);
+  line-height:1.9;
+}
+.partners-note b{
+  color:var(--black);
+  font-weight:800;
 }
 
-.loyal-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.loyal-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  border-top: 4px solid var(--red);
-  box-shadow: var(--shadow);
-  padding: 28px 24px;
-  transition: var(--trans);
-}
-
-.loyal-card .ic {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.loyal-card .ic svg {
-  width: 25px;
-  height: 25px;
-  color: var(--red);
-}
-
-.loyal-card h4 {
-  font-size: 17.5px;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.loyal-card ul {
-  display: grid;
-  gap: 8px;
-}
-
-.loyal-card li {
-  font-size: 14.5px;
-  color: var(--gray);
-  padding-right: 18px;
-  position: relative;
-}
-
-.loyal-card li::before {
-  content: '';
-  position: absolute;
-  right: 2px;
-  top: 11px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--red);
-}
-
-/* الأيام العالمية */
-.days-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  margin-top: 35px;
-}
-
-.day {
-  background: var(--black);
-  color: var(--white);
-  border-radius: 14px;
-  padding: 24px 16px;
-  text-align: center;
-  transition: var(--trans);
-}
-
-.day:nth-of-type(2),
-.day:nth-of-type(4) {
-  background: var(--red);
-}
-
-.day svg {
-  display: block;
-  width: 28px;
-  height: 28px;
-  margin: 0 auto 12px;
-  color: var(--red);
-  transition: var(--trans);
-}
-
-.day:nth-of-type(2) svg,
-.day:nth-of-type(4) svg {
-  color: var(--white);
-}
-
-.day b {
-  display: block;
-  font-size: 14.5px;
-  font-weight: 800;
-  margin-bottom: 4px;
-}
-
-.day span {
-  font-size: 12.5px;
-  opacity: .8;
+@media(max-width:680px){
+  .partners-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .partner-card{
+    padding:28px 22px 24px;
+  }
+  .partner-logo{
+    height:110px;
+  }
 }

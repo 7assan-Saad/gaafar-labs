@@ -20,13 +20,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
     <link href="./css/global.css" rel="stylesheet"></link>
     <link href="./css/about-lab.css" rel="stylesheet"></link>
-    <link href="../../css/responsive.css" rel="stylesheet"></link>
+    <link href="./css/responsive.css" rel="stylesheet"></link>
   </head>
   <body>
 
-    <!-- الهيدر -->
     <header class="header" id="header">
       <div class="container header-container header-in">
 
@@ -82,45 +82,6 @@
         </div>
 
         <div class="about-grid">
-
-          <!-- <div class="about-imgs reveal">
-            <div class="ph">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M9 2v6.5L4.5 17a3 3 0 0 0 2.6 4.5h9.8A3 3 0 0 0 19.5 17L15 8.5V2" />
-                  <path d="M8 2h8" />
-                </svg>
-                صورة
-              </span>
-            </div>
-            <div class="ph">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M9 2v6.5L4.5 17a3 3 0 0 0 2.6 4.5h9.8A3 3 0 0 0 19.5 17L15 8.5V2" />
-                  <path d="M8 2h8" />
-                </svg>
-                صورة
-              </span>
-            </div>
-            <div class="ph">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M9 2v6.5L4.5 17a3 3 0 0 0 2.6 4.5h9.8A3 3 0 0 0 19.5 17L15 8.5V2" />
-                  <path d="M8 2h8" />
-                </svg>
-                صورة
-              </span>
-            </div>
-            <div class="ph">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M9 2v6.5L4.5 17a3 3 0 0 0 2.6 4.5h9.8A3 3 0 0 0 19.5 17L15 8.5V2" />
-                  <path d="M8 2h8" />
-                </svg>
-                صورة
-              </span>
-            </div>
-          </div> -->
 
           <div class="about-txt reveal">
             <h2>دقة علمية.. <span>ورعاية إنسانية</span></h2>
@@ -195,7 +156,19 @@
               <img src="./imgs/quality-certificate.png" class="quality-certificate" alt="quality-certificate" width="160px">
             </div>
 
-            <a href="booking/" class="btn btn-black booking-btn" style="margin-top: 30px;">احجز موعدك الآن</a>
+          </div>
+        </div>
+
+        <div class="med-callout reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color:var(--red)">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <div class="content">
+            <b>المسؤولية المجتمعية</b>
+            <p>
+              نرى في العمل المعملي مسؤولية تتجاوز التحليل والنتيجة. ومن هذا المنطلق، كان لمعاملنا دور في جهود الدولة لفحص ومكافحة فيروس C، إلى جانب تقديم فحوصات دلالات الأورام والسمنة وهرمون النمو ضمن مبادرات مجتمعية تستهدف الفئات الأكثر احتياجاً. نؤمن أن صحة المجتمع لا تُبنى بالأجهزة وحدها، بل بالوعي والوصول العادل إلى الخدمة، وهذا ما نلتزم به كل يوم.
+            </p>
           </div>
         </div>
 
@@ -287,38 +260,93 @@
             <h2>أحدث <span>الأجهزة</span> المعملية</h2>
             <p>نستثمر في أحدث الأجهزة لنضمن لك دقة عالية ونتائج سريعة.</p>
           </div>
-          <div class="devices">
-            <div class="device reveal">
-              <div class="n">01</div>
-              <h4>أجهزة كيمياء حيوية آلية</h4>
-              <p>تحليل دقيق للسكر والكوليسترول ووظائف الكبد والكلى، بمعايرة يومية وسرعة في إصدار النتائج.</p>
+
+          <div class="swiper device-swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/Biomerieux-Vidas-immunoassay.jpg" alt="أجهزة تحاليل الهرمونات والمناعة ودلالات الأورام والفيتامينات">
+                </div>
+                <div class="slide-caption">جهاز تحاليل الهرمونات والمناعة ودلالات الأورام والفيتامينات</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/Biomerieux-mini-Vidas.jpg" alt="جهاز تحاليل الهرمونات والمناعة ودلالات الأورام والفيتامينات">
+                </div>
+                <div class="slide-caption">جهاز تحاليل الهرمونات والمناعة ودلالات الأورام والفيتامينات</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/FLEXOR-EL200.jpeg" alt="جهاز تحاليل صور الدم الحديثة">
+                </div>
+                <div class="slide-caption">جهاز تحاليل صور الدم الحديثة</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/SYSMEX-2.jpg" alt="جهاز تحاليل صور الدم الحديثة">
+                </div>
+                <div class="slide-caption">جهاز تحاليل صور الدم الحديثة</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/SYSMEX-1.jpg" alt="جهاز تحاليل صور الدم الحديثة">
+                </div>
+                <div class="slide-caption">جهاز تحاليل صور الدم الحديثة</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/Untitled-1.jpg" alt="جهاز تحاليل صور الدم الحديثة">
+                </div>
+                <div class="slide-caption">جهاز تحاليل صور الدم الحديثة</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/gh900plus.png" alt="جهاز تحليل السكر التراكمي الأوتوماتيك">
+                </div>
+                <div class="slide-caption">جهاز تحليل السكر التراكمي الأوتوماتيك</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/spermolyzer.png" alt="جهاز تحليل السائل المنوي بالكمبيوتر ( CASA )">
+                </div>
+                <div class="slide-caption">جهاز تحليل السائل المنوي بالكمبيوتر ( CASA )</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/Ion-metal-analysis.jpg" alt="جهاز تحليل الأيونات والمعادن">
+                </div>
+                <div class="slide-caption">جهاز تحليل الأيونات والمعادن</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/CoaDATA.jpg" alt="جهاز تحاليل السيولة وعوامل التجلط">
+                </div>
+                <div class="slide-caption">جهاز تحاليل السيولة وعوامل التجلط</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slide-img">
+                  <img src="./imgs/devices/ca-104-sysmex.jpg" alt="جهاز تحاليل السيولة وعوامل التجلط">
+                </div>
+                <div class="slide-caption">جهاز تحاليل السيولة وعوامل التجلط</div>
+              </div>
+
             </div>
-            <div class="device reveal">
-              <div class="n">02</div>
-              <h4>أجهزة هرمونات ومناعة</h4>
-              <p>تقنية متقدمة لقياس الهرمونات وفيتامينات الدم وعلامات الأورام بدقة عالية وحساسية مرتفعة.</p>
-            </div>
-            <div class="device reveal">
-              <div class="n">03</div>
-              <h4>أجهزة صورة دم كاملة</h4>
-              <p>عدّاد خلايا آلي يوفّر تحليلاً شاملاً للدم بسرعة ودقة، مع مراجعة ميكروسكوبية عند الحاجة.</p>
-            </div>
-            <div class="device reveal">
-              <div class="n">04</div>
-              <h4>أجهزة تجلط الدم</h4>
-              <p>قياس دقيق لعوامل التجلط ومتابعة مرضى السيولة والجراحات قبل وبعد العمليات.</p>
-            </div>
-            <div class="device reveal">
-              <div class="n">05</div>
-              <h4>أجهزة PCR والمناعة</h4>
-              <p>تقنيات جزيئية ومناعية حديثة للكشف عن الفيروسات والعدوى بدقة عالية.</p>
-            </div>
-            <div class="device reveal">
-              <div class="n">06</div>
-              <h4>نظام معلومات معملية LIS</h4>
-              <p>ربط إلكتروني كامل بين الأجهزة والنتائج لتقليل الخطأ البشري وتسريع التسليم.</p>
-            </div>
+            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
           </div>
+
         </div>
 
       </div>
@@ -435,5 +463,21 @@
 
     <script src="./js/global.js"></script>
     <script src="./js/animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper('.device-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        rtl: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        breakpoints: {
+          640:  { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 24 }
+        }
+      });
+    </script>
   </body>
 </html>

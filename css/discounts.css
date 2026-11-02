@@ -1,0 +1,256 @@
+.loyal-hero {
+  background: linear-gradient(135deg, var(--red), #7a0a10);
+  border-radius: 24px;
+  padding: 52px 46px;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loyal-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .045) 0 14px, transparent 14px 28px);
+}
+
+.loyal-hero h3 {
+  font-size: clamp(24px, 3.6vw, 36px);
+  font-weight: 900;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.loyal-hero p {
+  font-size: 16.5px;
+  opacity: .95;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.loyal-hero .btn {
+  background: var(--white);
+  color: var(--red);
+  position: relative;
+  z-index: 2;
+}
+
+.loyal-hero .btn:hover {
+  background: #ffe9ea;
+}
+
+.union-banner{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  background:var(--black);
+  color:var(--white);
+  border-radius:20px;
+  padding:26px 34px;
+  margin-bottom: 45px;
+}
+.union-banner::before{
+  content:'';position:absolute;bottom:-120px;right:-150px;
+  width:320px;height:320px;
+  background:radial-gradient(circle,rgba(216,20,28,.42),transparent 68%);
+  border-radius:50%;
+}
+.union-banner::after{
+  content:'';position:absolute;top:-105px;left:-70px;
+  width:260px;height:260px;
+  background:radial-gradient(circle,rgba(82, 85, 95, .55),transparent 70%);
+  border-radius:50%;
+}
+
+/* --- يمين: الأيقونة --- */
+.union-badge{
+  position:relative;
+  display:flex;align-items:center;
+  flex-shrink:0;
+  gap:14px;
+  text-align: center;
+  z-index:2;
+}
+.union-badge .icon{
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  width:64px;height:64px;
+  border-radius:16px;
+  background:linear-gradient(140deg,var(--red),#7d0b10);
+  box-shadow:0 10px 26px rgba(216,20,28,.45);
+}
+.union-badge .icon svg{width:32px;height:32px;color:#fff}
+.union-badge b{
+  display:block;font-size:26px;font-weight:900;line-height:1.1;
+  color:var(--red);
+}
+.union-badge span{
+  display:block;font-size:12.5px;color:var(--light);
+  font-weight:600;letter-spacing:.3px;
+}
+
+/* --- فاصل --- */
+.union-divider{
+  width:1px;
+  align-self:stretch;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.2),transparent);
+  position:relative;
+  z-index:2;
+}
+
+/* --- يسار: النص --- */
+.union-text{
+  flex:1;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+.union-text h3{
+  font-size:clamp(17px,2.6vw,22px);
+  font-weight:900;
+  margin-bottom:4px;
+  line-height:1.5;
+}
+.union-text h3 em{font-style:normal;color:var(--red)}
+.union-text p{
+  font-size:13.5px;
+  color:var(--light);
+  line-height:1.8;
+}
+
+@media(max-width:780px){
+  .union-banner{
+    flex-direction:column;
+    text-align:center;
+    padding:28px 22px;
+    gap:18px;
+  }
+  .union-divider{
+    width:60%;height:1px;
+    left: 9%;
+    transform: translateX(-50%);
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);
+  }
+  .union-text{text-align:center}
+  .union-badge .icon{width:56px;height:56px}
+  .union-badge .icon svg{width:28px;height:28px}
+  .union-badge b{font-size:22px}
+}
+
+.loyal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.loyal-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--red);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  transition: var(--trans);
+}
+
+.loyal-card .ic {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.loyal-card .ic svg {
+  width: 25px;
+  height: 25px;
+  color: var(--red);
+}
+
+.loyal-card h4 {
+  font-size: 17.5px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.loyal-card ul {
+  display: grid;
+  gap: 8px;
+}
+
+.loyal-card li {
+  font-size: 14.5px;
+  color: var(--gray);
+  padding-right: 18px;
+  position: relative;
+}
+
+.loyal-card li::before {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: 11px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+/* الأيام العالمية */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.day {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 14px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: var(--trans);
+}
+
+.day:nth-of-type(2),
+.day:nth-of-type(4) {
+  background: linear-gradient(135deg, var(--red), #7a0a10);
+}
+
+.day svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 12px;
+  color: var(--red);
+  transition: var(--trans);
+}
+
+.day:nth-of-type(2) svg,
+.day:nth-of-type(4) svg {
+  color: var(--white);
+}
+
+.day b {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.day span {
+  font-size: 12.5px;
+  opacity: .8;
+}

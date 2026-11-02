@@ -27,10 +27,7 @@
     padding: 13px 14px;
   }
 
-  .about-grid,
-  .doc-grid,
-  .booking-wrap,
-  .contact-grid {
+  .booking-wrap {
     grid-template-columns: 1fr;
   }
 
@@ -104,6 +101,10 @@
     padding-right: 10px;
   }
 
+  .doc-grid {
+    grid-template-columns: 1fr;
+  }
+
   .features-in,
   .vm-grid,
   .devices,
@@ -124,6 +125,12 @@
   .stat {
     border-left: none;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+  }
+
+  .more-btn, .booking-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .stat:last-child {
@@ -172,7 +179,4 @@
 
   .share-toast{ left:88px; font-size:12.5px; padding:9px 14px;}
 
-  .about-imgs .ph:first-child {
-    grid-row: auto;
-  }
 }
