@@ -184,6 +184,261 @@
   font-weight: 600;
 }
 
+/* آراء العملاء */
+
+.testimonials-swiper{
+  padding: 10px 6px 58px;
+  overflow: hidden;
+}
+
+.testimonial-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:30px 26px 26px;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+  transition:var(--trans);
+  position:relative;
+  overflow:hidden;
+}
+.testimonial-card::before{
+  content:'';
+  position:absolute;top:0;right:0;left:0;height:4px;
+  background:var(--red);
+  transform:scaleX(0);transform-origin:right;
+  transition:var(--trans);
+}
+.testimonial-card:hover{
+  transform:translateY(-6px);
+  border-color:transparent;
+}
+.testimonial-card:hover::before{
+  transform:scaleX(1);
+}
+
+/* أيقونة الاقتباس */
+.testimonial-quote{
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(216,20,28,.09);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;flex-shrink:0;
+}
+.testimonial-quote svg{width:22px;height:22px;color:var(--red)}
+
+/* النجوم */
+.testimonial-stars{
+  display:flex;gap:3px;margin-bottom:14px;
+}
+.testimonial-stars svg{
+  width:16px;height:16px;
+  color:#f5a623;
+  fill:#f5a623;
+}
+
+/* النص */
+.testimonial-text{
+  font-size:15px;line-height:1.95;
+  color:#2b2d33;
+  flex:1;margin-bottom:20px;
+}
+.testimonial-text b{font-weight:800;color:var(--black)}
+
+/* بيانات العميل */
+.testimonial-author{
+  display:flex;align-items:center;gap:12px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+}
+.testimonial-avatar{
+  width:46px;height:46px;border-radius:50%;
+  background:var(--black);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:800;flex-shrink:0;
+}
+.testimonial-author b{
+  display:block;font-size:15px;font-weight:800;color:var(--black);
+}
+.testimonial-author span{
+  display:block;font-size:12.5px;color:var(--gray);font-weight:600;
+}
+
+/* --- أسهم التنقل --- */
+.testimonials-swiper .swiper-button-next,
+.testimonials-swiper .swiper-button-prev{
+  width:44px;height:44px;
+  border-radius:50%;
+  background:#fff;
+  border:1.5px solid var(--line);
+  color:var(--black);
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  transition:var(--trans);
+  top:auto;
+  bottom:0;
+  margin-top:0;
+}
+.testimonials-swiper .swiper-button-next{ right:auto; left:0; }
+.testimonials-swiper .swiper-button-prev{ left:auto; right:0; }
+.testimonials-swiper .swiper-button-next:hover,
+.testimonials-swiper .swiper-button-prev:hover{
+  background:var(--red);
+  border-color:var(--red);
+  color:#fff;
+}
+.testimonials-swiper .swiper-button-next::after,
+.testimonials-swiper .swiper-button-prev::after{
+  display:none; /* إخفاء سهم Swiper الافتراضي، نستخدم SVG مخصص */
+}
+.testimonials-swiper .swiper-button-next svg,
+.testimonials-swiper .swiper-button-prev svg{
+  width:18px;height:18px;
+}
+
+/* --- النقاط --- */
+.testimonials-swiper .swiper-pagination{
+  bottom: 12px;
+}
+.testimonials-swiper .swiper-pagination-bullet{
+  width:8px;height:8px;
+  background:var(--gray);
+  opacity:.3;
+  transition:var(--trans);
+}
+.testimonials-swiper .swiper-pagination-bullet-active{
+  background:var(--red);
+  opacity:1;
+  width:24px;
+  border-radius:4px;
+}
+
+@media(max-width:680px){
+  .testimonial-card{padding:24px 20px 22px}
+  .testimonial-text{font-size:14.5px}
+  .testimonials-swiper .swiper-button-next,
+  .testimonials-swiper .swiper-button-prev{
+    width:38px;height:38px;
+  }
+}
+
+/* ===== اترك تقييم ===== */
+.review-cta{
+  background:var(--black);
+  border-radius:24px;
+  padding:52px 44px;
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:40px;
+  align-items:center;
+}
+.review-cta::before{
+  content:'';position:absolute;bottom:-160px;right:-100px;
+  width:420px;height:420px;
+  background:radial-gradient(circle,rgba(216,20,28,.42),transparent 68%);
+  border-radius:50%;
+}
+
+/* النص */
+.review-cta-text{position:relative;z-index:2}
+.review-cta-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(216,20,28,.16);
+  border:1px solid rgba(216,20,28,.42);
+  color:#ff9196;
+  font-size:13px;font-weight:800;
+  padding:7px 16px;border-radius:50px;
+  margin-bottom:18px;
+}
+.review-cta-badge svg{width:14px;height:14px}
+.review-cta h3{
+  font-size:clamp(22px,3.4vw,32px);
+  font-weight:900;line-height:1.45;
+  margin-bottom:12px;
+}
+.review-cta h3 em{font-style:normal;color:var(--red)}
+.review-cta p{
+  font-size:15.5px;color:var(--light);
+  line-height:1.95;max-width:560px;
+}
+.review-cta p b{color:#fff;font-weight:800}
+
+/* الزر */
+.review-cta-action{
+  position:relative;z-index:2;
+  flex-shrink:0;
+}
+.review-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  background:#1877F2;
+  color:var(--white);
+  padding:17px 32px;
+  border-radius:50px;
+  font-size:16px;
+  font-weight:800;
+  text-decoration:none;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  white-space:nowrap;
+  position:relative;
+  overflow:hidden;
+}
+.review-btn::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.18) 50%,transparent 70%);
+  transform:translateX(-100%);
+  transition:transform .6s ease;
+}
+.review-btn:hover{
+  background:#0d5ecb;
+  /* transform:translateY(-4px); */
+}
+.review-btn:hover::before{
+  transform:translateX(100%);
+}
+.review-btn svg{
+  width:22px;height:22px;
+  flex-shrink:0;
+  position:relative;z-index:2;
+}
+.review-btn span{position:relative;z-index:2}
+.review-note{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-size:12px;
+  color:rgba(255,255,255,.70);
+  margin-top:12px;
+  font-weight:600;
+}
+.review-note svg{width:13px;height:13px}
+
+/* الاستجابة */
+@media(max-width:900px){
+  .review-cta{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:42px 28px;
+    gap:28px;
+  }
+  .review-cta p{margin-inline:auto}
+  .review-cta-action{display:flex;flex-direction:column;align-items:center}
+}
+@media(max-width:680px){
+  .review-cta{padding:34px 22px;border-radius:20px}
+  .review-btn{
+    width:100%;
+    padding:16px 22px;
+    font-size:15px;
+  }
+  .review-btn svg{width:20px;height:20px}
+}
+
 /* تعاقداتنا */
 
 .partners-grid{

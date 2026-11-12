@@ -1,9 +1,14 @@
 
-const WHATSAPP_NUMBER = '201015534488';
+const WHATSAPP_AMREYA = '201015534488';
+const WHATSAPP_AGAMY  = '201210358627';
 
-document.getElementById('bookingForm').addEventListener('submit', function (e) {
-  e.preventDefault();
+const amreya = document.getElementById('amreya');
+const agamy = document.getElementById('agamy');
 
+amreya.addEventListener('click', () => waMessage(WHATSAPP_AMREYA));
+agamy.addEventListener('click', () => waMessage(WHATSAPP_AGAMY));
+
+function waMessage(WHATSAPP_NUMBER) {
   const name = document.getElementById('bName').value.trim();
   const phone = document.getElementById('bPhone').value.trim();
   const branch = document.getElementById('bBranch').value;
@@ -30,11 +35,9 @@ document.getElementById('bookingForm').addEventListener('submit', function (e) {
   msg += 'شرح النتائج: ' + (explain ? 'نعم' : 'لا') + '%0A';
   if (address) msg += 'العنوان: ' + address + '%0A';
   if (notes) msg += 'ملاحظات: ' + notes + '%0A';
-  msg += '━━━━━━━━━━━━━━━%0A';
-  msg += 'تم الإرسال من الموقع الإلكتروني';
 
-  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg, '_blank');
-});
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg);
+};
 
 /* ===================== منع اختيار تاريخ سابق ===================== */
 const dateInput = document.getElementById('bDate');

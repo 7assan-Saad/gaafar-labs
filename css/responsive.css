@@ -23,8 +23,11 @@
     backdrop-filter: blur(14px);
   }
 
-  .nav.open a {
-    padding: 13px 14px;
+  .nav > a {
+    font-size: 15px;
+  }
+  .header-cta, .header-results {
+    margin-top: 10px;
   }
 
   .booking-wrap {

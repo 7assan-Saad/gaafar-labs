@@ -20,17 +20,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="./css/global.css" rel="stylesheet"></link>
-    <link href="./css/doctor.css" rel="stylesheet"></link>
-    <link href="./css/responsive.css" rel="stylesheet"></link>
+    <link href="css/global.css" rel="stylesheet"></link>
+    <link href="css/doctor.css" rel="stylesheet"></link>
+    <link href="css/responsive.css" rel="stylesheet"></link>
   </head>
   <body>
    
     <header class="header" id="header">
       <div class="container header-container header-in">
 
-        <a href="./" class="logo">
-          <img src="./imgs/logo-icon.png" alt="logo-icon" width="40px">
+        <a href="/" class="logo">
+          <img src="imgs/logo-icon.png" alt="logo-icon" width="40px">
           <div class="logo-txt">
             <h3>معامل أ.د. عبد الله جعفر</h3>
             <p>للتحاليـل الطبيـة</p>
@@ -38,13 +38,14 @@
         </a>
 
         <nav class="nav" id="nav">
-          <a href="./">الرئيسية</a>
+          <a href="/">الرئيسية</a>
           <a href="about/">عن المعمل</a>
           <a href="doctor/">عن الدكتور</a>
           <a href="services/">الخدمات والتحاليل</a>
           <a href="discounts/">الخصومات</a>
           <a href="articles/">المقالات</a>
           <a href="faq/">الأسئلة الشائعة</a>
+          <a href="careers/">الوظائف</a>
           <a href="contact-us/">التواصل</a>
 
           <div class="header-cta">
@@ -54,6 +55,16 @@
                 <path d="M16 2v4M8 2v4M3 10h18" />
               </svg>
               احجز موعدك
+            </a>
+          </div>
+          <div class="header-results">
+            <a href="https://aglab.tarqeem.net/results" target="_blank" class="btn btn-outline btn-results">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8.5 15l2 2 4-4"/>
+              </svg>
+              استلام النتائج
             </a>
           </div>
         </nav>
@@ -76,19 +87,11 @@
 
         <div class="doc-grid">
           <div class="doc-photo reveal">
-            <div class="ph" style="min-height:470px">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 21v-1a8 8 0 0 1 16 0v1" />
-                </svg>
-                صورة الدكتور عبد الله جعفر
-              </span>
-            </div>
-            <div class="doc-badge">
-              <b>+25 سنة</b>
+            <img src="imgs/dr_abdullah.jpg" alt="dr_abdullah">
+            <!-- <div class="doc-badge">
+              <b>+20 سنة</b>
               <span>خبرة في التحاليل الطبية</span>
-            </div>
+            </div> -->
           </div>
 
           <div class="doc-txt reveal">
@@ -163,7 +166,7 @@
             </div>
 
             <div class="trust">
-              <div><b>+25</b><span>سنة خبرة</span></div>
+              <div><b>+20</b><span>سنة خبرة</span></div>
               <div><b>+150K</b><span>تحليل سنوياً</span></div>
               <div><b>+50K</b><span>مريض يثق بنا</span></div>
             </div>
@@ -178,7 +181,7 @@
           <div class="foot-col">
 
             <div class="foot-logo">
-              <img src="./imgs/logo-icon.png" alt="logo-icon" width="50px">
+              <img src="imgs/logo-icon.png" alt="logo-icon" width="50px">
               <div class="logo-txt">
                 <h3>معامل أ.د. عبد الله جعفر</h3>
                 <p>للتحاليـل الطبيـة</p>
@@ -192,7 +195,7 @@
               صحتك أمانة، ودقتنا وعد.
             </p>
 
-            <img src="./imgs/gaafar-logo-black.png" alt="logo-black" width="150px"
+            <img src="imgs/gaafar-logo-black.png" alt="logo-black" width="150px"
             style="margin-top: 20px; margin-left: auto; margin-right: auto;">
 
           </div>
@@ -201,9 +204,9 @@
             <h4>روابط سريعة</h4>
             <ul>
               <li><a href="booking/">حجز موعد</a></li>
+              <li><a href="https://aglab.tarqeem.net/results" target="_blank">استلام النتائج</a></li>
               <li><a href="about/">عن المعمل</a></li>
               <li><a href="doctor/">عن الدكتور</a></li>
-              <li><a href="services/">الخدمات والتحاليل</a></li>
               <li><a href="faq/">الأسئلة الشائعة</a></li>
               <li><a href="careers/">الوظائف</a></li>
             </ul>
@@ -212,11 +215,11 @@
           <div class="foot-col">
             <h4>خدماتنا</h4>
             <ul>
-              <li><a href="services/">التحليل الشامل</a></li>
-              <li><a href="services/">تحاليل ما قبل الزواج</a></li>
-              <li><a href="services/">تحاليل السكري والكلى</a></li>
-              <li><a href="services/">تحاليل الهرمونات</a></li>
-              <li><a href="services/">تحاليل الشركات</a></li>
+              <li><a href="services/">تحاليل عامة</a></li>
+              <li><a href="services/">هرمونات ووظائف</a></li>
+              <li><a href="services/">باقات شاملة</a></li>
+              <li><a href="services/">تحليل الشركات</a></li>
+              <li><a href="services/">سحب العينة من المنزل</a></li>
               <li><a href="discounts/">الخصومات</a></li>
             </ul>
           </div>
@@ -226,6 +229,17 @@
             <ul>
               <li><a href="contact-us/">صفحة التواصل</a></li>
             </ul>
+            <a href="suggestions/" class="btn btn-outline suggestions">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                  <circle cx="8.5" cy="11.5" r="1" fill="currentColor" stroke="none"/>
+                  <circle cx="12" cy="11.5" r="1" fill="currentColor" stroke="none"/>
+                  <circle cx="15.5" cy="11.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <span>للشكاوى والإقتراحات</span>
+            </a>
           </div>
         </div>
 

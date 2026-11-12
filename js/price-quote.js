@@ -1,10 +1,17 @@
 
-// const WHATSAPP_NUMBER = '201006424284'; // ← رقم واتساب في booking.js
-const form = document.getElementById('priceForm');
+const WHATSAPP_AMREYA = '201015534488';
+const WHATSAPP_AGAMY  = '201210358627';
+
+const amreya = document.getElementById('amreya');
+const agamy = document.getElementById('agamy');
+
 const success = document.getElementById('pqSuccess');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
+amreya.addEventListener('click', () => waMessage(WHATSAPP_AMREYA));
+
+agamy.addEventListener('click', ()=> waMessage(WHATSAPP_AGAMY));
+
+function waMessage(WHATSAPP_NUMBER) {
 
   const name  = document.getElementById('pName').value.trim();
   const phone = document.getElementById('pPhone').value.trim();
@@ -50,6 +57,6 @@ form.addEventListener('submit', function (e) {
   msg += '━━━━━━━━━━━━━━━%0A';
   msg += 'أرجو إرسال الأسعار، شكراً.';
 
-  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg, '_blank');
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg);
   success.classList.add('on');
-});
+}

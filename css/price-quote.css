@@ -39,6 +39,30 @@
   color:#12833f;font-size:13.5px;font-weight:700;padding:13px 16px;border-radius:12px;margin-top:14px}
 .pq-success.on{display:block;animation:fadeUp .4s ease}
 
+.field {margin-bottom: 10px;}
+
+.pq-img-tests {
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.pq-img-tests::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--red);
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-left: 2px;
+}
+
+.btn-wa {
+  width:100%;
+  margin-top:8px;
+  padding:16px
+}
+
 @media(max-width:980px){
   .pq-wrap{grid-template-columns:1fr}
   .pq-side,.pq-form{padding:38px 28px}

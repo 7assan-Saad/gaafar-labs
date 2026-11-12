@@ -1,5 +1,5 @@
 
-const WHATSAPP_NUMBER = '201015534488';
+const WHATSAPP_NUMBER = '201006424284';
 
 /* ---------- فلترة الوظائف ---------- */
 const tabs = document.querySelectorAll('#jobTabs .jtab');

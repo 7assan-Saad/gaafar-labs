@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+  <head>
+    <script>
+      (function () {
+        let isGitHub = location.hostname.endsWith('github.io');
+        let href = isGitHub ? '/gaafar-labs/' : '/';
+        document.write('<base href="' + href + '">');
+      })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشكاوى والإقتراحات | معامل أ.د. عبد الله جعفر</title>
+    <meta name="description"
+      content="معامل الدكتور عبد الله جعفر للتحاليل الطبية - دقة في النتائج، أحدث الأجهزة، سحب العينة من المنزل مجاناً، وخدمة شرح النتائج. احجز موعدك الآن.">
+    <meta name="keywords"
+      content="تحاليل طبية, معمل تحاليل, الدكتور عبد الله جعفر, تحليل شامل, سحب عينة من المنزل, تحاليل السكري, تحاليل الهرمونات">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet"></link>
+    <link href="css/form.css" rel="stylesheet"></link>
+    <link href="css/suggestions.css" rel="stylesheet"></link>
+    <link href="css/responsive.css" rel="stylesheet"></link>
+  </head>
+
+  <body>
+    
+    <header class="header" id="header">
+      <div class="container header-container header-in">
+
+        <a href="/" class="logo">
+          <img src="imgs/logo-icon.png" alt="logo-icon" width="40px">
+          <div class="logo-txt">
+            <h3>معامل أ.د. عبد الله جعفر</h3>
+            <p>للتحاليـل الطبيـة</p>
+          </div>
+        </a>
+
+        <nav class="nav" id="nav">
+          <a href="/">الرئيسية</a>
+          <a href="about/">عن المعمل</a>
+          <a href="doctor/">عن الدكتور</a>
+          <a href="services/">الخدمات والتحاليل</a>
+          <a href="discounts/">الخصومات</a>
+          <a href="articles/">المقالات</a>
+          <a href="faq/">الأسئلة الشائعة</a>
+          <a href="careers/">الوظائف</a>
+          <a href="contact-us/">التواصل</a>
+
+          <div class="header-cta">
+            <a href="booking/" class="btn btn-red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+              احجز موعدك
+            </a>
+          </div>
+          <div class="header-results">
+            <a href="https://aglab.tarqeem.net/results" target="_blank" class="btn btn-outline btn-results">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8.5 15l2 2 4-4"/>
+              </svg>
+              استلام النتائج
+            </a>
+          </div>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </header>
+
+    <section class="sec sec-gray" id="feedback">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-tag">رأيك يهمنا</span>
+          <h2>نموذج <span>الشكاوى والاقتراحات</span></h2>
+          <p>نحن نستمع إليك باهتمام — سواء كان لديك اقتراح لتطوير خدماتنا، أو ملاحظة على تجربتك، أو كلمة شكر لفريقنا.</p>
+          <div class="sec-line"></div>
+        </div>
+
+        <div class="apply-wrap reveal">
+
+          <div class="apply-side">
+            <h3>لماذا نطلب رأيك؟</h3>
+            <p>لأن تحسين خدماتنا يبدأ من إنصاتنا لك — كل رسالة تُقرأ بعناية، وكل ملاحظة تُدرَس بجدية.</p>
+
+            <ul class="apply-list">
+              <li>
+                <div class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div>
+                  <b>سرية تامة</b>
+                  <span>بياناتك محفوظة ولا تُطلع عليها إلا الإدارة العليا.</span>
+                </div>
+              </li>
+              <li>
+                <div class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div>
+                  <b>رد خلال 48 ساعة</b>
+                  <span>ستصلك رسالة تأكيد فور الاستلام، ثم رد رسمي من الإدارة.</span>
+                </div>
+              </li>
+              <li>
+                <div class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div>
+                  <b>يمكنك التقديم مجهولاً</b>
+                  <span>إن فضّلت عدم ذكر اسمك، ضع علامة على خيار «تقديم مجهول».</span>
+                </div>
+              </li>
+              <li>
+                <div class="ic">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <div>
+                  <b>اقتراحك قد يُنفَّذ</b>
+                  <span>كثير من تحسيناتنا بدأت من ملاحظة مريض أو موظف.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="apply-form" id="feedbackForm">
+            <h3>أرسل رسالتك</h3>
+            <p class="hint">اختر نوع الرسالة واملأ التفاصيل — سيتم إرسالها إلى واتساب الإدارة مباشرة.</p>
+
+            <label class="pq-label" style="display:block;font-size:14px;font-weight:700;margin-bottom:9px">
+              نوع الرسالة <i style="color:var(--red);font-style:normal">*</i>
+            </label>
+            <div class="feedback-type">
+              <label class="ftype">
+                <input type="radio" name="fType" value="شكوى" required>
+                <div class="ftype-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                  <b>شكوى</b>
+                  <span>ملاحظة على خدمة أو تجربة</span>
+                </div>
+              </label>
+
+              <label class="ftype">
+                <input type="radio" name="fType" value="اقتراح">
+                <div class="ftype-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"/>
+                    <path d="M9 18h6M10 22h4"/>
+                  </svg>
+                  <b>اقتراح</b>
+                  <span>فكرة لتطوير الخدمة</span>
+                </div>
+              </label>
+
+              <label class="ftype">
+                <input type="radio" name="fType" value="شكر وإشادة">
+                <div class="ftype-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                  <b>شكر وإشادة</b>
+                  <span>كلمة تقدير لفريقنا</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="fName">الاسم <span style="color:var(--gray);font-weight:600;font-size:12px">(اختياري)</span></label>
+                <input type="text" id="fName" placeholder="اكتب اسمك أو اتركه فارغاً">
+              </div>
+              <div class="field">
+                <label for="fPhone">رقم الهاتف <span style="color:var(--gray);font-weight:600;font-size:12px">(اختياري)</span></label>
+                <input type="tel" id="fPhone" placeholder="01xxxxxxxxx">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="fEmail">البريد الإلكتروني <span style="color:var(--gray);font-weight:600;font-size:12px">(اختياري)</span></label>
+                <input type="email" id="fEmail" placeholder="name@example.com">
+              </div>
+              <div class="field">
+                <label for="fBranch">الفرع</label>
+                <select id="fBranch">
+                  <option value="">اختر الفرع</option>
+                  <option>فرع العامرية</option>
+                  <option>فرع العجمي</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="fSubject">موضوع الرسالة <i style="color:var(--red);font-style:normal">*</i></label>
+              <input type="text" id="fSubject" placeholder="مثال: تأخر في تسليم نتيجة، اقتراح خدمة جديدة، شكر لفريق السحب..." required>
+            </div>
+
+            <div class="field">
+              <label for="fDetails">تفاصيل الرسالة <i style="color:var(--red);font-style:normal">*</i></label>
+              <textarea id="fDetails" placeholder="اشرح لنا الموضوع بالتفصيل — كلما زادت التفاصيل، أمكننا التعامل مع رسالتك بشكل أفضل..." required style="min-height:120px"></textarea>
+            </div>
+
+            <label class="check">
+              <input type="checkbox" id="fAnonymous">
+              <span>أرغب في تقديم رسالتي بشكل مجهول (لن يُطلب مني ذكر الاسم أو الهاتف)</span>
+            </label>
+
+            <label class="check">
+              <input type="checkbox" id="fCallback">
+              <span>أرغب في أن تتواصل معي الإدارة هاتفياً لمناقشة الموضوع</span>
+            </label>
+
+            <button type="submit" class="btn btn-wa" style="width:100%;margin-top:18px;padding:16px">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+              إرسال الرسالة عبر الواتساب
+            </button>
+
+            <p class="form-note">
+              لن يتم إرسال أي شيء تلقائياً — ستفتح رسالة واتساب جاهزة وأنت من يضغط إرسال.
+              ستصلك رسالة تأكيد من الإدارة خلال ٤٨ ساعة.
+            </p>
+
+            <div class="apply-success" id="feedbackSuccess">
+              ✅ تم تجهيز رسالتك. أرسلها في واتساب وسيتم التعامل معها خلال ٤٨ ساعة.
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="foot-grid">
+          <div class="foot-col">
+
+            <div class="foot-logo">
+              <img src="imgs/logo-icon.png" alt="logo-icon" width="50px">
+              <div class="logo-txt">
+                <h3>معامل أ.د. عبد الله جعفر</h3>
+                <p>للتحاليـل الطبيـة</p>
+              </div>
+            </div>
+
+            <p>
+              معامل متخصصة في التحاليل الطبية، نقدم نتائج دقيقة وخدمة إنسانية راقية
+              بأحدث الأجهزة وأمهر فريق طبي.
+              <br>
+              صحتك أمانة، ودقتنا وعد.
+            </p>
+
+            <img src="imgs/gaafar-logo-black.png" alt="logo-black" width="150px"
+            style="margin-top: 20px; margin-left: auto; margin-right: auto;">
+
+          </div>
+
+          <div class="foot-col">
+            <h4>روابط سريعة</h4>
+            <ul>
+              <li><a href="booking/">حجز موعد</a></li>
+              <li><a href="https://aglab.tarqeem.net/results" target="_blank">استلام النتائج</a></li>
+              <li><a href="about/">عن المعمل</a></li>
+              <li><a href="doctor/">عن الدكتور</a></li>
+              <li><a href="faq/">الأسئلة الشائعة</a></li>
+              <li><a href="careers/">الوظائف</a></li>
+            </ul>
+          </div>
+
+          <div class="foot-col">
+            <h4>خدماتنا</h4>
+            <ul>
+              <li><a href="services/">تحاليل عامة</a></li>
+              <li><a href="services/">هرمونات ووظائف</a></li>
+              <li><a href="services/">باقات شاملة</a></li>
+              <li><a href="services/">تحليل الشركات</a></li>
+              <li><a href="services/">سحب العينة من المنزل</a></li>
+              <li><a href="discounts/">الخصومات</a></li>
+            </ul>
+          </div>
+
+          <div class="foot-col">
+            <h4>تواصل معنا</h4>
+            <ul>
+              <li><a href="contact-us/">صفحة التواصل</a></li>
+            </ul>
+            <a href="suggestions/" class="btn btn-outline suggestions">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                  <circle cx="8.5" cy="11.5" r="1" fill="currentColor" stroke="none"/>
+                  <circle cx="12" cy="11.5" r="1" fill="currentColor" stroke="none"/>
+                  <circle cx="15.5" cy="11.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <span>للشكاوى والإقتراحات</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="foot-bottom">
+          <span>© <span id="year"></span> معامل أ.د. عبد الله جعفر للتحاليل الطبية — جميع الحقوق محفوظة.</span>
+          <span>تصميم وتطوير م.
+            <a href="https://wa.me/+201060344718" target="_blank"
+            style="font-weight: 800;">
+              حســن سعـــد
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-stack">
+
+      <!-- واتساب -->
+      <a href="https://wa.me/201006424284"
+        class="wa-float" target="_blank" rel="noopener" aria-label="تواصل واتساب">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.19-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.79 9.79 0 0 1-1.5-5.23c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.82-9.81 9.82zM20.5 3.49A11.78 11.78 0 0 0 12.05 0C5.53 0 .22 5.31.22 11.83c0 2.08.55 4.11 1.58 5.9L.12 24l6.4-1.68a11.8 11.8 0 0 0 5.53 1.41h.01c6.51 0 11.82-5.31 11.82-11.83 0-3.16-1.23-6.13-3.38-8.41z"/></svg>
+      </a>
+
+      <!-- فيسبوك -->
+      <a href="https://www.facebook.com/drgaafarlabs/"
+        class="fb-float" target="_blank" rel="noopener" aria-label="صفحة الفيسبوك">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+      </a>
+
+      <!-- المشاركة -->
+      <button type="button" class="share-float" id="shareBtn" aria-label="مشاركة صفحة الموقع">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"/>
+          <circle cx="6" cy="12" r="3"/>
+          <circle cx="18" cy="19" r="3"/>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </svg>
+      </button>
+
+    </div>
+    
+    <!-- تنبيه النسخ -->
+    <div class="share-toast" id="shareToast">✅ تم نسخ رابط الصفحة</div>
+
+    <button class="to-top" id="toTop" aria-label="عودة للأعلى">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+     
+    <script src="js/global.js"></script>
+    <script src="js/suggestions.js"></script>
+    <script src="js/animation.js"></script>
+  </body>
+</html>
