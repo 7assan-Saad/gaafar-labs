@@ -524,8 +524,8 @@
                 </select>
               </div>
               <div class="field">
-                <label for="jExp">سنوات الخبرة</label>
-                <select id="jExp">
+                <label for="jExp">سنوات الخبرة <i>*</i></label>
+                <select id="jExp" required>
                   <option value="">اختر</option>
                   <option>حديث التخرج</option>
                   <option>أقل من سنة</option>
@@ -538,8 +538,8 @@
     
             <div class="form-row">
               <div class="field">
-                <label for="jQual">المؤهل الدراسي</label>
-                <input type="text" id="jQual" placeholder="مثال: بكالوريوس علوم - تحاليل طبية">
+                <label for="jQual">المؤهل الدراسي <i>*</i></label>
+                <input type="text" id="jQual" placeholder="مثال: بكالوريوس علوم - تحاليل طبية" required>
               </div>
               <div class="field">
                 <label for="jBranch">الفرع المفضل</label>
@@ -806,8 +806,9 @@
       </div>
     </footer>
     
-    <script src="./js/careers.js"></script>
-    <script src="./js/animation.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/careers.js"></script>
+    <script src="js/animation.js"></script>
 
   </body>
 </html>

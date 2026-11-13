@@ -20,6 +20,16 @@ function waMessage(WHATSAPP_NUMBER) {
   const address = document.getElementById('bAddress').value.trim();
   const notes = document.getElementById('bNotes').value.trim();
 
+  if (!name || !phone) {
+    alert('من فضلك اكتب الاسم ورقم الهاتف.');
+    return;
+  }
+
+  if (!/^01[0125][0-9]{8}$/.test(phone.replace(/[\s\-()]/g, ''))) {
+    alert('رقم الهاتف غير صحيح — اكتب 11 رقماً مثل 01012345678.');
+    return;
+  }
+
   let msg = '';
   msg += 'طلب حجز موعد%0A';
   msg += '━━━━━━━━━━━━━━━%0A';

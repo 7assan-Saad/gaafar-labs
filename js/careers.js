@@ -66,8 +66,8 @@ form.addEventListener('submit', function (e) {
     alert('من فضلك أكمل الاسم ورقم الهاتف والوظيفة المتقدم لها.');
     return;
   }
-  if (!/^0?1[0-9]{8,9}$/.test(phone.replace(/\s/g, ''))) {
-    alert('رقم الهاتف غير صحيح — اكتب رقماً مصرياً صحيحاً مثل 01xxxxxxxxx.');
+  if (!/^01[0125][0-9]{8}$/.test(phone.replace(/[\s\-()]/g, ''))) {
+    alert('رقم الهاتف غير صحيح — اكتب 11 رقماً مثل 01012345678.');
     return;
   }
 
