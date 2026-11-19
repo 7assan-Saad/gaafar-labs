@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <script>
-      (function () {
-        let isGitHub = location.hostname.endsWith('github.io');
-        let href = isGitHub ? '/gaafar-labs/' : '/';
-        document.write('<base href="' + href + '">');
-      })();
-    </script>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عن أ.د. عبد الله جعفر | معامل أ.د. عبد الله جعفر</title>
@@ -16,10 +10,13 @@
     <meta name="keywords"
       content="تحاليل طبية, معمل تحاليل, الدكتور عبد الله جعفر, تحليل شامل, سحب عينة من المنزل, تحاليل السكري, تحاليل الهرمونات">
     <meta name="theme-color" content="#000000">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/Cairo-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Cairo-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Cairo-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Cairo-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Cairo-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Cairo-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Cairo-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/global.css" rel="stylesheet"></link>
     <link href="css/doctor.css" rel="stylesheet"></link>
     <link href="css/responsive.css" rel="stylesheet"></link>
