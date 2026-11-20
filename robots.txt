@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /imgs/favicon.ico
+Disallow:
+
+Sitemap: https://gaafarlabs.com/sitemap.xml

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>روابط معامل أ.د. عبد الله جعفر</title>
+  <meta name="description" content="كل روابط معامل أ.د. عبد الله جعفر للتحاليل الطبية في مكان واحد: الموقع، حجز المواعيد، استلام النتائج، الشكاوى والاقتراحات.">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="روابط معامل أ.د. عبد الله جعفر">
+  <meta property="og:description" content="احجز موعدك، استلم نتائجك، وتواصل معنا من مكان واحد.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gaafarlabs.com/links/">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:image" content="https://gaafarlabs.com/imgs/web-img.png">
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:secure_url" content="https://gaafarlabs.com/imgs/web-img.png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="525" />
+
+  <link rel="shortcut icon" href="https://gaafarlabs.com/imgs/favicon.ico" />
+  <link rel="manifest" href="./manifest.json">
+
+  <link rel="preload" href="fonts/Cairo-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Cairo-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Cairo-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Cairo-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Cairo-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Cairo-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <style>
+
+    @font-face{
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-Light.woff2') format('truetype');
+      font-weight:300;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-Regular.woff2') format('truetype');
+      font-weight:400;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-SemiBold.woff2') format('truetype');
+      font-weight:600;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-Bold.woff2') format('truetype');
+      font-weight:700;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-ExtraBold.woff2') format('truetype');
+      font-weight:800;font-style:normal;font-display:swap;
+    }
+    @font-face{
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-Black.woff2') format('truetype');
+      font-weight:900;font-style:normal;font-display:swap;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    :root{
+      --black:#000000;
+      --red:#D8141C;
+      --red-dark:#a80f15;
+      --gray:#8b8e96;
+      --white:#ffffff;
+      --trans:.3s cubic-bezier(.4,0,.2,1);
+    }
+
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Cairo',system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+      background:var(--black);
+      color:var(--white);
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:56px 20px 40px;
+      direction:rtl;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      position:relative;
+    }
+
+    /* توهجات الخلفية */
+    body::before{
+      content:'';
+      position:fixed;
+      top:-260px;left:-160px;
+      width:620px;height:620px;
+      background:radial-gradient(circle,rgba(216,20,28,.32),transparent 68%);
+      border-radius:50%;
+      filter:blur(30px);
+      pointer-events:none;
+      z-index:0;
+    }
+    body::after{
+      content:'';
+      position:fixed;
+      bottom:-280px;right:-180px;
+      width:620px;height:620px;
+      background:radial-gradient(circle,rgba(82,85,95,.42),transparent 70%);
+      border-radius:50%;
+      filter:blur(30px);
+      pointer-events:none;
+      z-index:0;
+    }
+
+    /* ===== الحاوية ===== */
+    .links-wrap{
+      width:100%;
+      max-width:460px;
+      position:relative;
+      z-index:2;
+    }
+
+    /* ===== الهوية أعلى الصفحة ===== */
+    .brand{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      margin-bottom:44px;
+    }
+    /* .brand-mark{
+      width:84px;height:84px;
+      border-radius:22px;
+      background:linear-gradient(140deg,var(--red),#7d0b10);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 14px 40px rgba(216,20,28,.45);
+      margin-bottom:20px;
+      position:relative;
+    }
+    .brand-mark svg{
+      width:44px;height:44px;
+      color:#fff;
+    }
+    .brand-mark::after{
+      content:'';
+      position:absolute;
+      inset:-6px;
+      border-radius:28px;
+      border:1px solid rgba(216,20,28,.32);
+    } */
+    .brand h1{
+      font-size:20px;
+      font-weight:800;
+      line-height:1.5;
+      color:var(--white);
+      margin-bottom:6px;
+    }
+    .brand p{
+      font-size:13.5px;
+      color:var(--gray);
+      font-weight:600;
+      line-height:1.7;
+    }
+
+    /* ===== قائمة الروابط ===== */
+    .links-list{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      list-style:none;
+    }
+
+    .link-btn{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      padding:16px 18px;
+      background:rgba(255,255,255,.045);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:16px;
+      text-decoration:none;
+      color:var(--white);
+      transition:var(--trans);
+      position:relative;
+      overflow:hidden;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .link-btn::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.07) 50%,transparent 70%);
+      transform:translateX(-100%);
+      transition:transform .6s ease;
+      pointer-events:none;
+    }
+    .link-btn:hover,
+    .link-btn:focus-visible{
+      background:rgba(255,255,255,.075);
+      border-color:rgba(216,20,28,.6);
+      transform:translateY(-3px);
+      box-shadow:0 12px 30px rgba(0,0,0,.5);
+      outline:none;
+    }
+    .link-btn:hover::before{transform:translateX(100%)}
+    .link-btn:active{transform:translateY(-1px) scale(.995)}
+
+    .link-icon{
+      width:46px;height:46px;
+      border-radius:13px;
+      background:rgba(216,20,28,.16);
+      border:1px solid rgba(216,20,28,.32);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      transition:var(--trans);
+    }
+    .link-icon svg{
+      width:23px;height:23px;
+      color:var(--red);
+      transition:var(--trans);
+    }
+    .link-btn:hover .link-icon{
+      background:var(--red);
+      border-color:var(--red);
+    }
+    .link-btn:hover .link-icon svg{
+      color:var(--white);
+    }
+
+    .link-label{
+      flex:1;
+      font-size:15.5px;
+      font-weight:700;
+      line-height:1.5;
+      color:var(--white);
+    }
+    .link-label small{
+      display:block;
+      font-size:11.5px;
+      font-weight:600;
+      color:var(--gray);
+      margin-top:2px;
+      transition:var(--trans);
+    }
+    .link-btn:hover .link-label small{color:#b9bcc4}
+
+    .link-arrow{
+      width:20px;height:20px;
+      color:var(--gray);
+      flex-shrink:0;
+      transition:var(--trans);
+    }
+    .link-btn:hover .link-arrow{
+      color:var(--red);
+      transform:translateX(-4px);
+    }
+
+    /* ===== تذييل ===== */
+    .links-foot{
+      margin-top:40px;
+      text-align:center;
+      font-size:12px;
+      color:#52555F;
+      font-weight:600;
+      line-height:1.9;
+    }
+    .links-foot a{
+      color:var(--gray);
+      text-decoration:none;
+      transition:var(--trans);
+    }
+    .links-foot a:hover{color:var(--red)}
+
+    /* ===== ظهور تدريجي ===== */
+    .fade{
+      opacity:0;
+      transform:translateY(18px);
+      animation:fadeIn .6s ease forwards;
+    }
+    @keyframes fadeIn{
+      to{opacity:1;transform:translateY(0)}
+    }
+    .fade:nth-child(1){animation-delay:.05s}
+    .fade:nth-child(2){animation-delay:.13s}
+    .fade:nth-child(3){animation-delay:.21s}
+    .fade:nth-child(4){animation-delay:.29s}
+    .fade:nth-child(5){animation-delay:.37s}
+    .fade:nth-child(6){animation-delay:.45s}
+
+    /* ===== الاستجابة ===== */
+    @media(max-width:480px){
+      body{padding:40px 16px 32px}
+      .brand-mark{width:72px;height:72px;border-radius:19px}
+      .brand-mark svg{width:38px;height:38px}
+      .brand h1{font-size:18px}
+      .brand p{font-size:12.5px}
+      .brand{margin-bottom:34px}
+      .link-btn{padding:14px 15px;gap:13px;border-radius:14px}
+      .link-icon{width:42px;height:42px;border-radius:12px}
+      .link-icon svg{width:21px;height:21px}
+      .link-label{font-size:14.5px}
+      .links-list{gap:12px}
+    }
+  </style>
+
+  </head>
+
+<body>
+
+<main class="links-wrap">
+
+  <!-- الهوية -->
+  <div class="brand fade">
+    <!-- <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 2v6.5L4.5 17a3 3 0 0 0 2.6 4.5h9.8A3 3 0 0 0 19.5 17L15 8.5V2"/>
+        <path d="M8 2h8"/>
+        <path d="M7 14h10"/>
+      </svg>
+    </div> -->
+    <img src="./imgs/gaafar-logo-black.png" alt="gaafar-logo"
+    style="width: 130px;">
+    <h1>معامل أ.د. عبد الله جعفر</h1>
+    <p>للتحاليل الطبية — كل روابطنا في مكان واحد</p>
+  </div>
+
+  <!-- الروابط -->
+  <nav class="links-list" aria-label="روابط المعمل">
+
+    <!-- الموقع الإلكتروني -->
+    <a href="https://gaafarlabs.com/" class="link-btn fade" target="_blank" rel="noopener">
+      <span class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </span>
+      <span class="link-label">
+        الموقع الإلكتروني
+        <small>كل خدماتنا ومعلوماتنا</small>
+      </span>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </a>
+
+    <!-- حجز موعد -->
+    <a href="https://gaafarlabs.com/booking/" class="link-btn fade" target="_blank" rel="noopener">
+      <span class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+          <path d="M9 16l2 2 4-4"/>
+        </svg>
+      </span>
+      <span class="link-label">
+        حجز موعد
+        <small>احجز تحليلك وسحب العينة من المنزل</small>
+      </span>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </a>
+
+    <!-- استلام النتائج -->
+    <a href="https://aglab.tarqeem.net/results" class="link-btn fade" target="_blank" rel="noopener">
+      <span class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <path d="M14 2v6h6"/>
+          <path d="M8.5 15l2 2 4-4"/>
+        </svg>
+      </span>
+      <span class="link-label">
+        استلام النتائج
+        <small>اطلع على نتائج تحاليلك إلكترونياً</small>
+      </span>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </a>
+
+    <!-- الشكاوى والاقتراحات -->
+    <a href="https://gaafarlabs.com/suggestions" class="link-btn fade" target="_blank" rel="noopener">
+      <span class="link-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          <circle cx="8" cy="10" r="1" fill="currentColor" stroke="none"/>
+          <circle cx="12" cy="10" r="1" fill="currentColor" stroke="none"/>
+          <circle cx="16" cy="10" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span class="link-label">
+        الشكاوى والاقتراحات
+        <small>رأيك يهمنا — شاركنا تجربتك</small>
+      </span>
+      <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </a>
+
+  </nav>
+
+  <!-- التذييل -->
+  <p class="links-foot fade">
+    © <span id="year">2026</span> معامل أ.د. عبد الله جعفر للتحاليل الطبية<br>
+  </p>
+
+</main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

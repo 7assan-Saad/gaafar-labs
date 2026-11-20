@@ -2,7 +2,7 @@
 
 @font-face{
   font-family:'Cairo';
-  src:url('../fonts/Cairo-Light.ttf') format('truetype');
+  src:url('../fonts/Cairo-Light.woff2') format('truetype');
   font-weight:300;
   font-style:normal;
   font-display:swap;

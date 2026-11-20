@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>404 - الصفحة غير موجودة</title>
+  <style>
+    @font-face {
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-Bold.woff2') format('woff2');
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family:'Cairo';
+      src:url('./fonts/Cairo-Regular.woff2') format('woff2');
+      font-display: swap;
+    }
+
+    :root {
+      --primary: #D8141C;
+      --secondary: #000000;
+    }
+
+    html {
+      direction: rtl;
+      text-align: right;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cairo';
+      color: var(--primary) !important;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .redirect {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 35px;
+      padding: 10px 35px;
+      margin: 10px;
+      transition: .35s cubic-bezier(.4,0,.2,1);
+    }
+    .home-page { background-color: var(--primary);}
+    .home-page:hover { background-color: #a80f15;}
+    .previous-page { background-color: var(--secondary);}
+    .previous-page:hover { background-color: rgba(0, 0, 0, .85);}
+
+    .not-found {
+      @media (min-width: 576px) {
+        font-size: 1.2rem
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div style="width: 450px; padding-left: 20px; padding-right: 20px;">
+    <img src="./imgs/404.svg" width="90%" alt="404-photo">
+    <p class="not-found">عفواً ! الصفحة التي تبحث عنها غير موجودة</p>
+    <div>
+      <a href="/" class="redirect home-page">الصفحة الرئيسية</a>
+      <a href="javascript:history.back()" class="redirect previous-page">الصفحة السابقة</a>
+    </div>
+  </div>
+</body>
+
+</html>
