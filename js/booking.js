@@ -1,5 +1,5 @@
 
-const WHATSAPP_AMREYA = '201015534488';
+const WHATSAPP_AMREYA = '201006424284';
 const WHATSAPP_AGAMY  = '201210358627';
 
 const amreya = document.getElementById('amreya');
