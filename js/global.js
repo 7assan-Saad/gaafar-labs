@@ -82,3 +82,54 @@ btn.addEventListener('click', async () => {
   // بديل: نسخ الرابط
   copyLink();
 });
+
+/* ===== Page Transition Overlay ===== */
+(function () {
+  const overlay = document.getElementById('pageOverlay');
+  if (!overlay) return;
+
+  const DURATION = 250; // ← يجب أن يطابق مدة page-fade-out
+  const body = document.body;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // عند الرجوع من ذاكرة التخزين المؤقت
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) {
+      overlay.classList.remove('is-active');
+      body.classList.remove('page-fade-out');
+    }
+  });
+
+  // عند النقر على رابط داخلي
+  document.addEventListener('click', function (e) {
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+
+    const link = e.target.closest('a');
+    if (!link) return;
+    if (link.target === '_blank') return;
+    if (link.hasAttribute('download') || link.hasAttribute('data-no-fade')) return;
+
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+    let url;
+    try { url = new URL(href, location.href); } catch { return; }
+    if (url.origin !== location.origin) return;
+    if (url.pathname === location.pathname && url.search === location.search) return;
+
+    e.preventDefault();
+
+    if (reducedMotion.matches) {
+      location.href = link.href;
+      return;
+    }
+
+    // اعرض الـ overlay وأخفِ الصفحة
+    overlay.classList.add('is-active');
+    body.classList.add('page-fade-out');
+
+    setTimeout(function () {
+      location.href = link.href;
+    }, DURATION);
+  });
+})();
