@@ -117,6 +117,7 @@
 }
 
 .vm-card {
+  text-align: center;
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -145,6 +146,8 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .vm-ico svg {

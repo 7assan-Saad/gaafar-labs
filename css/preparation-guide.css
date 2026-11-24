@@ -339,6 +339,7 @@
 }
 @media(max-width:680px){
   .med-hero{padding:56px 0 64px}
+  .med-hero h1{font-size:x-large;}
   .med-hero-actions .btn{flex:1;min-width:0}
   .med-summary-box{padding:24px 22px;margin-top:-30px}
   .med-body{padding:44px 0 20px}

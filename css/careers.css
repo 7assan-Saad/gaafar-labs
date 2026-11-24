@@ -2,12 +2,12 @@
 /* المزايا */
 .job-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .job-benefit{
-  background:#fff;border:1px solid var(--line);border-radius:16px;
+  text-align:center;background:#fff;border:1px solid var(--line);border-radius:16px;
   padding:28px 24px;transition:var(--trans);border-top:4px solid var(--red);
 }
 .job-benefit .ic{
   width:52px;height:52px;border-radius:14px;background:rgba(216,20,28,.09);
-  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;margin-left:auto;margin-right:auto;
 }
 .job-benefit .ic svg{width:25px;height:25px;color:var(--red)}
 .job-benefit h4{font-size:17px;font-weight:800;margin-bottom:8px}
@@ -56,18 +56,21 @@
 /* مراحل التوظيف */
 .process{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .process-step{
-  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  text-align:center; background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
   border-radius:16px;padding:26px 20px;transition:var(--trans);
 }
 .process-step .num{
   width:42px;height:42px;border-radius:50%;background:rgba(216,20,28,.16);
   border:1px solid rgba(216,20,28,.45);color:#ff9196;font-weight:900;font-size:16px;
-  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;margin-left:auto;margin-right:auto;
 }
 .process-step h4{font-size:15.5px;font-weight:800;margin-bottom:6px;color:var(--white)}
 .process-step p{font-size:13.5px;color:#a9acb4;line-height:1.85}
 
 /* نموذج التقديم */
+.apply .sec-head span:last-child {
+  color: var(--black);
+}
 .apply-wrap{
   display:grid;grid-template-columns:.85fr 1.15fr;border-radius:24px;
   overflow:hidden;box-shadow:var(--shadow-lg);background:var(--white);
@@ -112,6 +115,12 @@
 @media(max-width:680px){
   .job-benefits,.process{grid-template-columns:1fr}
   .jobs-grid{grid-template-columns:1fr}
+  .apply .sec-head span:last-child{
+    display: block;
+  }
+  .job-benefits-head span {
+    display: inline-block;
+  }
   .apply-side,.apply-form{padding:34px 22px}
   .job-card{padding:22px 20px}
 }
